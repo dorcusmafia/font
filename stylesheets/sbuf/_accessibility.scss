@@ -1,0 +1,16 @@
+// Accessibility
+// --------------------------------------------------
+
+@mixin focus-default {
+    text-decoration: none;
+    outline: 1px dotted $brand-primary;
+    outline-offset: 1px;
+}
+
+@mixin focus-inset {
+    outline-offset: -1px;
+}
+
+@mixin focus-inverse {
+    outline-color: #fff;
+}

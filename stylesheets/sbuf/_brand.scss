@@ -1,0 +1,22 @@
+// Brand
+// --------------------------------------------------
+
+.logo-sbuf {
+    width: 125px;
+    height: 25px;
+    display: block;
+    background-image: url('#{$image-path}logo-sbuf.svg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-bottom: 0;
+
+    &.logo-reverse {
+        background-image: url('#{$image-path}logo-sbuf-reverse.svg');
+
+        &:active,
+        &:focus {
+            @include focus-inverse;
+        }
+    }
+}

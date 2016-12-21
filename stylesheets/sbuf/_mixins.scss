@@ -1,0 +1,63 @@
+// Mixins
+// --------------------------------------------------
+
+@mixin background-size($style: cover) {
+    background-size: $style;
+}
+
+@mixin box-shadow($style) {
+    box-shadow: $style
+}
+
+@mixin transform($style) {
+    transform: $style;
+}
+
+@mixin transition($style: 200ms all ease 0) {
+    transition: $style;
+}
+
+@mixin bg-img-cover {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    img {
+        display: none !important;
+    }
+}
+
+@mixin word-wrap {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+@mixin truncate-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin vertical-align-parent {
+    transform-style: preserve-3d;
+}
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin list-table-indicator-variant($parent, $color) {
+    #{$parent} {
+        box-shadow: inset $spacing-xxxsmall 0 0 0 $color;
+    }
+}
+
+@mixin list-table-background-variant($parent, $color) {
+    #{$parent} {
+        background-color: $color;
+    }
+}

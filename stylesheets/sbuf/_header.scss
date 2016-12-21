@@ -1,0 +1,41 @@
+﻿// Site header
+// --------------------------------------------------
+
+.header {
+    height: 75px;
+    position: relative;
+    background-color: $brand-primary;
+
+    &.is_stuck {
+        @include fade-in;
+        z-index: 10;
+    }
+
+    .logo-sbuf {
+        position: absolute;
+        top: 25px;
+        left: 15px;
+    }
+
+    .account-info-dropdown {
+        position: absolute;
+        top: 13px;
+        right: 15px;
+    }
+
+    .account-info-btn {
+        display: block;
+        border-bottom: 0;
+    }
+
+    .dropdown-menu {
+        min-width: 250px;
+    }
+}
+
+.sub-header {
+    padding-top: $spacing-base;
+    padding-bottom: $spacing-base;
+    margin-bottom: $spacing-large;
+    background-color: $brand-primary;
+}

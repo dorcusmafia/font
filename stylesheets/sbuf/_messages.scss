@@ -1,0 +1,22 @@
+﻿// Messages
+// --------------------------------------------------
+
+/*.message-list {
+}
+
+.message-author {
+}
+
+.message-subject {
+    margin-bottom: 0;
+        
+    .status-unread & {
+        font-weight: 600;
+        color: $brand-primary;
+    }
+
+    .status-read & {
+        font-weight: 500;
+        color: $text-muted;
+    }
+}*/

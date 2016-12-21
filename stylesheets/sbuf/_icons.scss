@@ -1,0 +1,215 @@
+﻿// Icons
+// --------------------------------------------------
+
+@mixin icon-settings {
+    font-family: 'Material Icons';
+    -webkit-font-feature-settings: 'liga';
+}
+
+@mixin icon-angle-down {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f107';
+}
+
+@mixin icon-angle-double-left {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f100';
+}
+
+@mixin icon-angle-double-right {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f101';
+}
+
+@mixin icon-angle-left {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f104';
+}
+
+@mixin icon-angle-right {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f105';
+}
+
+@mixin icon-angle-up {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f106';
+}
+
+@mixin icon-circle-empty {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f10c';
+}
+
+@mixin icon-circle-full {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f111';
+}
+
+@mixin icon-circle-half {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f042';
+}
+
+@mixin icon-checkbox {
+    @include icon-settings;
+    content: 'check_box_outline_blank';
+}
+
+@mixin icon-checkbox-checked {
+    @include icon-settings;
+    content: 'check_box';
+}
+
+@mixin icon-close {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f00d';
+}
+
+@mixin exclamation-triangle {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f071';
+}
+
+@mixin icon-ellipsis-h {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f141';
+}
+
+@mixin icon-ellipsis-v {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f142';
+}
+
+@mixin icon-email {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f003';
+}
+
+@mixin icon-excel {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f1c3';
+}
+
+@mixin icon-exclamation {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\xf06a';
+}
+
+@mixin icon-facebook {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f09a';
+}
+
+@mixin icon-image {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f03e';
+}
+
+@mixin icon-instagram {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f16d';
+}
+
+@mixin icon-linkedin {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f0e1';
+}
+
+@mixin icon-long-arrow-right {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f178';
+}
+
+@mixin icon-microphone {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f130';
+}
+
+@mixin icon-pdf {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f1c1';
+}
+
+@mixin icon-pinterest {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f0d2';
+}
+
+@mixin icon-play {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f01d';
+}
+
+@mixin icon-powerpoint {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f1c4';
+}
+
+@mixin icon-search {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f002';
+}
+
+@mixin icon-twitter {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f099';
+}
+
+@mixin icon-word {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f1c2';
+}
+
+@mixin icon-youtube {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f01d';
+}
+
+@mixin icon-microphone {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f130';
+}
+
+@mixin icon-sign-out {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f08b';
+}
+
+@mixin icon-zip {
+    font-family: FontAwesome;
+    font-weight: 400;
+    content: '\f1c6';
+}

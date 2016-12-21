@@ -1,0 +1,138 @@
+// Buttons
+// --------------------------------------------------
+
+.btn {
+    @include transition(200ms color ease);
+    @include transition(200ms background-color ease);
+    font-family: $font-family-sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: normal;
+    padding-left: $spacing-small;
+    padding-right: $spacing-small;
+    border-width: 2px;
+    border-color: transparent;
+    cursor: pointer;
+
+    @media (min-width: $screen-sm) {
+        padding-left: $spacing-base;
+        padding-right: $spacing-base;
+    }
+
+    &:hover,
+    &:hover:active {
+        border-color: transparent;
+    }
+
+    &:active,
+    &:active:focus,
+    &:focus {
+        @include focus-default;
+        border-color: transparent;
+    }
+
+    .btn-text-collapsed {
+        display: none;
+    }
+
+    &.collapsed {
+        .btn-text {
+            display: none;
+        }
+
+        .btn-text-collapsed {
+            display: inline;
+        }
+    }
+}
+
+.btn-lg {
+    padding-left: ($padding-large-horizontal * 1.75);
+    padding-right: ($padding-large-horizontal * 1.75);
+}
+
+.btn-sm {
+}
+
+.btn-xs {
+    font-size: $font-size-xsmall;
+    padding: 3px 10px;
+}
+
+.btn:active,
+.btn.active {
+    box-shadow: none;
+}
+
+.btn-link {
+    font-weight: 500;
+}
+
+.btn-secondary {
+    @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+
+.btn-transparent {
+    @include button-variant($btn-transparent-color, $btn-transparent-bg, $btn-transparent-border);
+
+    &:hover {
+        color: $btn-transparent-color;
+        background-color: rgba($btn-transparent-color, .2);
+        border-color: $btn-transparent-color;
+    }
+}
+
+.btn-inverse {
+    @include button-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border);
+}
+
+.btn-reverse {
+    @include button-variant($btn-reverse-color, $btn-reverse-bg, $btn-reverse-border);
+}
+
+.btn-outline {
+    @include button-variant($btn-outline-color, $btn-outline-bg, $btn-outline-border);
+
+    &:hover,
+    &:focus {
+        color: $btn-outline-color;
+        background-color: $btn-outline-bg;
+    }
+}
+
+.btn-shy {
+    @include button-variant($btn-shy-color, $btn-shy-bg, $btn-shy-border);
+
+    &:hover {
+        color: #fff;
+        background-color: $btn-primary-bg;
+    }
+}
+
+.btn[data-toggle="collapse"].collapsed {
+    // @extend .active;
+}
+
+.btn,
+.btn + .btn {
+    margin: 0 0 5px;
+
+    @media (min-width: $screen-sm) {
+        margin: 0;
+    }
+}
+
+.btn-group{
+    &.open {
+        .dropdown-toggle {
+            box-shadow: none;
+        }
+    }
+}
+
+.action-secondary {
+    position: absolute;
+    right: $spacing-xsmall;
+    top: $spacing-xsmall;
+    border-bottom: 0;
+}

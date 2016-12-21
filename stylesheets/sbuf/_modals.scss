@@ -1,0 +1,166 @@
+// Modals
+// --------------------------------------------------
+
+// Container that the modal scrolls within
+.modal {
+    -webkit-overflow-scrolling: touch;
+
+    &.fade .modal-dialog {
+        @include translate(0, 0%); // Remove default slide down.
+        @include transition-transform("0.3s ease-out");
+    }
+
+    &.in .modal-dialog {
+        @include translate(0, 0)
+    }
+
+    &.modal-sm,
+    &.modal-lg {
+        width: auto; // Remove Bootstrap's sizing
+    }
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+
+    @media (min-width: $screen-xs) {
+        padding: $spacing-xsmall;
+    }
+
+    @media (min-width: $screen-sm) {
+        width: 70vw;
+        padding: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+        width: 60vw;
+    }
+
+    @media (min-width: $screen-xl) {
+        width: 50vw;
+    }
+
+    .modal-sm & {
+        @media (min-width: $screen-sm) {
+            width: 50vw;
+        }
+
+        @media (min-width: $screen-lg) {
+            width: 40vw;
+        }
+
+        @media (min-width: $screen-xl) {
+            width: 30vw;
+        }
+    }
+
+    .modal-lg & {
+        @media (min-width: $screen-sm) {
+            width: 80vw;
+        }
+
+        @media (min-width: $screen-lg) {
+            width: 70vw;
+        }
+
+        @media (min-width: $screen-xl) {
+            width: 60vw;
+        }
+    }
+    
+    .modal-xl & {
+        @media (min-width: $screen-sm) {
+            width: auto;
+            padding: $spacing-base;
+        }
+    }
+}
+
+// Actual modal
+.modal-content {
+    border: 0;
+    border-radius: 0;
+}
+
+// Modal background
+.modal-backdrop {
+    background-color: $brand-inverse;
+
+    // Fade for backdrop
+    &.fade {
+        @include opacity(0);
+    }
+
+    &.in {
+        @include opacity(0.85);
+    }
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+    @media (min-width: $screen-sm) {
+        padding: $spacing-base;
+    }
+
+    .modal-title {}
+}
+
+// Close icon
+.modal-dialog .close {
+    margin-top: 3px;
+
+    &:focus {
+        @include focus-default;
+        @include focus-inverse;
+    }
+
+    & ~ .modal-title {
+        margin-right: 30px;
+    }
+}
+
+.modal-body {
+    @media (min-width: $screen-sm) {
+        padding: $spacing-base;
+    }
+}
+
+.modal-footer {
+    text-align: left;
+
+    @media (min-width: $screen-sm) {
+        padding: $spacing-base;
+    }
+
+    .btn,
+    .btn + .btn {
+        margin: 0 0 5px;
+
+        @media (min-width: $screen-sm) {
+            margin: 0;
+        }
+    }
+}
+
+// Modal background color variations
+.modal-brand-primary.in {
+    &~.modal-backdrop {
+        background-color: $brand-primary;
+        opacity: 0.8;
+    }
+}
+
+.modal-brand-secondary.in {
+    &~.modal-backdrop {
+        background-color: $brand-secondary;
+        opacity: 0.8;
+    }
+}
+
+.modal-brand-inverse.in {
+    &~.modal-backdrop {
+        background-color: $brand-inverse;
+        opacity: 0.9;
+    }
+}

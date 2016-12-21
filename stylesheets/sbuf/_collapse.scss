@@ -1,0 +1,16 @@
+﻿.collapse-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.collapse-heading {
+    @include clearfix;
+    padding: 3px 0;
+}
+
+.collapse-body-wrapper { // Prevents jerky animation
+    .collapse-body {
+        @include clearfix;
+        padding: 5px 0 10px;
+    }
+}
