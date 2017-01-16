@@ -1,0 +1,24 @@
+﻿// Nav main
+// --------------------------------------------------
+
+.nav-main {
+    @include media-breakpoint-up(sm) {
+        margin-left: 200px;
+    }
+
+    .nav-link {
+        color: #fff;
+        padding-top: 27px;
+        padding-right: $spacing-small;
+        padding-bottom: 27px;
+        padding-left: $spacing-small;
+        display: block;
+        float: left;
+        border-bottom: 0;
+
+        &:hover {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+}

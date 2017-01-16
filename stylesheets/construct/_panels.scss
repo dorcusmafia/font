@@ -1,0 +1,293 @@
+// Panels
+// --------------------------------------------------
+.panel {
+    @include box-shadow(none);
+    background-color: transparent;
+
+    > .list-group {
+        list-style: none;
+    }
+}
+
+.panel-heading {
+    a {
+        color: $link-color;
+        padding: $panel-heading-padding 0;
+        margin: -$panel-heading-padding;
+        display: block;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        i {
+            @include transition;
+            margin-right: $spacing-xxsmall;
+
+            .active & {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+// Accordion
+.panel-group-accordion {
+    padding-left: 0;
+    list-style: none;
+
+    .panel {
+        + .panel {
+            margin-top: 0;
+        }
+
+        &.active {
+            .panel-heading {
+            }
+        }
+    }
+}
+
+.accordion-toggle {
+    text-decoration: none;
+    padding-left: $spacing-xsmall;
+    padding-right: $spacing-xsmall;
+
+    &:after {
+        @include transition(all 200ms ease);
+        @include icon-angle-down;
+        font-size: $font-size-xl;
+        float: right;
+    }
+
+    .active & {
+        &:after {
+            transform: rotate(-180deg);
+        }
+    }
+}
+
+// Widget
+.panel-widget {
+    border: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    .panel-heading {
+        line-height: 1;
+        position: relative;
+        border-radius: $border-radius-base $border-radius-base 0 0;
+
+        + .panel-body {
+                border-top: 1px solid $neutral-10;
+        }
+
+        + .list-group {
+            .list-group-item {
+                &:first-child {
+                    border-top-width: 1px;
+                }
+            }
+        }
+    }
+
+    .panel-title {
+        font-size: $font-size-xs;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+
+        small {
+            font-size: $font-size-xs;
+            font-weight: 500;
+            font-style: italic;
+            text-transform: none;
+            letter-spacing: normal;
+            color: $text-muted;
+        }
+    }
+
+    .panel-footer {
+        background-color: transparent;
+        border-radius: 0 0 $border-radius-base $border-radius-base;
+
+        .summary-link {
+            font-size: $font-size-xxs;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: $text-muted;
+            display: block;
+        }
+    }
+
+    .link-more {
+        padding: 0;
+        margin: 0;
+        float: right;
+        display: block;
+
+        &:before {
+            @include icon-angle-right;
+            font-size: $font-size-sm;
+            text-shadow: none;
+            display: inline-block;
+        }
+    }
+}
+
+.panel-bg-primary {
+    color: #fff;
+    background-color: $brand-primary !important;
+    border-color: lighten($brand-primary, 10%) !important;
+
+    a {
+        color: lighten($brand-primary, 25%) !important;
+    }
+}
+
+.panel-bg-secondary {
+    color: #fff;
+    background-color: $brand-secondary !important;
+    border-color: lighten($brand-secondary, 10%) !important;
+
+    a {
+        color: lighten($brand-secondary, 25%) !important;
+    }
+}
+
+.panel-bg-tertiary {
+    color: #fff;
+    background-color: $brand-tertiary !important;
+    border-color: lighten($brand-tertiary, 10%) !important;
+
+    a {
+        color: lighten($brand-tertiary, 25%) !important;
+    }
+}
+
+.panel-bg-inverse {
+    color: #fff;
+    background-color: $brand-inverse !important;
+    border-color: lighten($brand-inverse, 15%) !important;
+
+    a {
+        color: lighten($brand-inverse, 35%) !important;
+    }
+}
+
+// Guide
+// --------------------------------------------------
+
+.guide-step {
+    min-height: 80px;
+    margin-top: $spacing-base;
+    margin-bottom: $spacing-base;
+    position: relative;
+
+    &:last-child {
+        &:before {
+            bottom: $spacing-base;
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: -$spacing-base;
+        left: 31px;
+        border-left: 2px solid $neutral-15;
+        z-index: 1;
+
+        @include media-breakpoint-down(xs) {
+            left: 25px;
+        }
+    }
+}
+
+.guide-step-heading {
+    position: relative;
+    cursor: pointer;
+}
+
+.guide-step-number {
+    @extend .panel-title;
+    @include box-shadow(0 0 0 2px $neutral-20); 
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-h3;
+    font-weight: 700;
+    line-height: $headings-line-height;
+    text-align: center;
+    color: $body-color;
+    width: 62px;
+    padding: $spacing-small 0 $spacing-small 0;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 31px;
+    z-index: 2;
+
+    @include media-breakpoint-down(xs) {
+        width: 50px;
+        padding: $spacing-xsmall 0 $spacing-xsmall 0;
+        margin-top: 6px;
+        border-radius: 25px;
+    }
+}
+
+.guide-step-title {
+    @extend .panel-title;
+    font-size: $font-size-h3;
+    line-height: $headings-line-height;
+    color: $brand-secondary;
+    padding: $spacing-small $spacing-large $spacing-small $spacing-xsmall;
+    margin: 0 0 0 62px;
+
+    @include media-breakpoint-down(xs) {
+        margin-left: 50px;
+    }
+
+    @include media-breakpoint-up(sm) {
+        margin-left: 92px
+    }
+
+    &:after {
+        @include icon-angle-down;
+        @include transition(250ms ease-in-out transform);
+        font-size: $font-size-h2;
+        color: $brand-secondary;
+        position: absolute;
+        right: 0;
+        top: 14px;
+        
+        .active & {
+            transform: rotate(-180deg);
+        }
+    }
+}
+
+.guide-step-body {
+    margin-left: 62px;
+
+    @include media-breakpoint-down(xs) {
+        margin-left: 50px;
+    }
+
+    @include media-breakpoint-up(sm) {
+        margin-left: 92px
+    }
+
+    .guide-step-inner {
+        padding: 0 $spacing-xsmall $spacing-xxsmall;
+    }
+}
+
+/*.collapse-body {
+    max-height: 0;
+    overflow: hidden;
+
+    &.active {
+        max-height: 9999em;
+    }
+}*/

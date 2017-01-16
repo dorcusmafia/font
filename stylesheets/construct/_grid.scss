@@ -1,0 +1,96 @@
+// Grid system
+// --------------------------------------------------
+// Container widths
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+    // @include container-fixed;
+    @include media-breakpoint-up(sm) {
+        width: auto;
+    }
+    @include media-breakpoint-up(md) {
+        width: auto;
+    }
+    @include media-breakpoint-up(lg) {
+        /*width: auto;*/
+        /*width: $container-lg;*/
+        max-width: 1500px;
+    }
+}
+// Rough way of targeting mobile portrait breakpoint.
+// Eg. <div class="col-xs-portrait col-xs-6">
+
+.col-xs-portrait {
+    @include media-breakpoint-down(xs) {
+        width: 100%;
+    }
+}
+// Gutterless row
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > [class*=" col-"],
+    > [class^="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    // To handle sticky wrapper
+    > div > [class*=" col-"],
+    > div > [class^="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+// Dev: Show grid
+
+.show-grid [class^=col-] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(86, 61, 124, 0.15);
+    border: 1px solid rgba(86, 61, 124, 0.2);
+}
+// Dev: Breakpoint label
+
+body:after {
+    @include transition;
+    content: 'Breakpoint: none';
+    font-family: $font-family-sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 5px 10px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+@include media-breakpoint-up(xs) {
+    body:after {
+        content: 'Breakpoint: xs';
+    }
+}
+@include media-breakpoint-up(sm) {
+    body:after {
+        content: 'Breakpoint: sm';
+    }
+}
+@include media-breakpoint-up(md) {
+    body:after {
+        content: 'Breakpoint: md';
+    }
+}
+@include media-breakpoint-up(lg) {
+    body:after {
+        content: 'Breakpoint: lg';
+    }
+}
+@include media-breakpoint-up(xl) {
+    body:after {
+        content: 'Breakpoint: xl';
+    }
+}

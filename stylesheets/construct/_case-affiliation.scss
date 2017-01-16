@@ -1,0 +1,95 @@
+﻿.case-affiliation-item {
+    line-height: 1.6;
+    padding: 0 5px;
+    margin-bottom: 10px;
+    position: relative;
+
+    @include media-breakpoint-up(xs) {
+        line-height: 1.8;
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        background-color: $gray-lighter;
+        @include transition;
+    }
+
+    &:after {
+        content: '\f0d7';
+        font-family: 'FontAwesome';
+        font-size: 12px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+    .case-number {
+        font-weight: 600;
+        display: block;
+
+        @include media-breakpoint-up(xs) {
+            width: 10%;
+            padding-right: 10px;
+            float: left;
+        }
+    }
+
+    .case-title {
+        display: block;
+        cursor: pointer;
+
+        @include media-breakpoint-up(xs) {
+            width: 85%;
+            float: left;
+        }
+    }
+
+    .collapse-body {
+        border-bottom: 1px solid $gray-lighter;
+
+        @include media-breakpoint-up(xs) {
+            padding-left: 10%;
+        }
+    }
+}
+
+.case-affiliation-role-list {
+    padding-left: 1.25em;
+}
+
+.case-affiliation-role {
+    font-weight: 600;
+}
+
+.case-affiliation-name {
+}
+
+.case-affiliation-search {
+    margin: 10px 0;
+}
+
+.case-affiliation-item-add {
+    @include fade-in-highlight;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: $gray-lighter;
+    /*animation: fadeInHighlight ease-in 1000ms;*/
+
+    &:after {
+        content: "";
+    }
+
+    .collapse-body {
+        border-bottom: 0;
+    }
+}
+
+.case-affiliation-remove {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.search-case {
+    margin: 10px 0;
+}

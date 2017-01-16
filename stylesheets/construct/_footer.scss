@@ -1,0 +1,13 @@
+// Footer
+// --------------------------------------------------
+
+.footer {
+    font-size: 13px;
+    padding-top: $spacing-small;
+    padding-bottom: $spacing-small;
+
+    @include media-breakpoint-up(sm) {
+        padding-top: $spacing-large;
+        padding-bottom: $spacing-large;
+    }
+}

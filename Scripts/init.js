@@ -1,36 +1,29 @@
 ﻿require.config({
     waitSeconds: 200,
-    baseUrl: 'Scripts/',
+    baseUrl: 'scripts/',
     paths: {
-        'jquery': 'lib/jquery',
-        'text': 'lib/text',
         'bootstrap': 'lib/bootstrap',
-        'bootstrap.select': 'lib/bootstrap-select',
-        'moment': 'lib/moment-with-locales',
-        'select2': 'lib/select2',
         'bootstrap-toolkit': 'lib/bootstrap-toolkit',
-        'scrollto': 'lib/jquery.scrollTo',
-        'sticky-kit': 'lib/sticky-kit',
-        'tablesorter': 'lib/jquery.tablesorter',
+        'jquery': 'lib/jquery',
         'knockout': 'lib/knockout-latest',
         'ko.mapping': 'lib/knockout.mapping',
-        'jquery-ui/widget': 'lib/jquery.ui.widget',
-        'iframetransport': 'lib/jquery.iframe-transport',
-        'fileupload': 'lib/jquery.fileupload',
-        'underscore': 'lib/underscore',
-        'ko.extentions': 'app/knockout-extensions',
-        'utils': 'app/utils'
+        'moment': 'lib/moment-with-locales',
+        'scrollto': 'lib/jquery.scrollTo',
+        'select2': 'lib/select2',
+        'sticky-kit': 'lib/sticky-kit',
+        'tether': 'lib/tether',
+        'text': 'lib/text',
     },
 
     shim: {
         'bootstrap': {
-            deps: ['jquery']
-        },
-        'jqurey.widget': {
-            deps: ['jquery']
+            deps: ['jquery', 'tether']
         },
         'bootstrap-toolkit': {
             deps: ['jquery']
+        },
+        'ko.mapping': {
+            deps: ['knockout']
         },
         'scrollto': {
             deps: ['jquery']
@@ -38,26 +31,5 @@
         'sticky-kit': {
             deps: ['jquery']
         },
-        'ko.extentions': {
-            deps: ['knockout','jquery']
-        },
-        'ko.mapping': {
-            deps: ['knockout']
-        },
-        'sbufConfig': {
-            deps: ['ko.extentions']
-        },
-        'viewmodels/users/usersViewModel': {
-            deps: ['bootstrap', 'select2', 'bootstrap.select', 'tablesorter', 'ko.extentions']
-        },
-        'viewmodels/theses/thesesSearchViewModel': {
-            deps: ['bootstrap', 'select2', 'bootstrap.select', 'tablesorter', 'ko.extentions']
-        },
-        'viewmodels/projectarea/dashboardViewModel': {
-            deps: ['bootstrap', 'select2', 'bootstrap.select', 'tablesorter', 'ko.extentions']
-        },
-        'viewmodels/projectarea/projectViewModel': {
-            deps: ['bootstrap', 'select2', 'bootstrap.select', 'tablesorter', 'ko.extentions']
-        }
     }
 });

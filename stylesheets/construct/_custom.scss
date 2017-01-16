@@ -1,0 +1,138 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-flex:               true;
+$enable-rounded:            true;
+$enable-shadows:            false;
+$enable-gradients:          false;
+$enable-transitions:        false;
+$enable-hover-media-query:  false;
+$enable-grid-classes:       true;
+$enable-print-styles:       true;
+
+// Colors
+
+$neutral-base:          #000;                        // black
+$neutral-90:            lighten($neutral-base, 10%); // #1a1a1a
+$neutral-80:            lighten($neutral-base, 20%); // #333333
+$neutral-70:            lighten($neutral-base, 30%); // #4d4d4d
+$neutral-60:            lighten($neutral-base, 40%); // #666666
+$neutral-50:            lighten($neutral-base, 50%); // #808080
+$neutral-40:            lighten($neutral-base, 60%); // #999999
+$neutral-35:            lighten($neutral-base, 65%); // #acacac
+$neutral-30:            lighten($neutral-base, 70%); // #b3b3b3
+$neutral-20:            lighten($neutral-base, 80%); // #cccccc
+$neutral-15:            lighten($neutral-base, 85%); // #d9d9d9
+$neutral-12:            lighten($neutral-base, 88%); // #e0e0e0
+$neutral-10:            lighten($neutral-base, 90%); // #e6e6e6
+$neutral-5:             lighten($neutral-base, 95%); // #f2f2f2
+$neutral-2:             lighten($neutral-base, 98%); // #fafafa
+
+$brand-primary:         #007dc5;
+$brand-secondary:       #4dad3b;
+$brand-tertiary:        #ffd800;
+$brand-inverse:         $neutral-90;
+$brand-success:         #5cb85c;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+
+// Body
+
+$body-bg:    #fff;
+$body-color: $neutral-90;
+
+// Links
+
+$link-color:            $brand-primary;
+$link-decoration:       none;
+$link-hover-color:      darken($link-color, 15%);
+$link-hover-decoration: none;
+
+// Typography
+
+$fonts-path: "/assets/fonts/";
+
+$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-serif:      "Source Serif Pro", Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:  "Source Code Pro", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base:       $font-family-serif;
+
+// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+$font-size-root: 16px;
+
+$font-size-base: 1rem;
+$font-size-xxxxl:   3.75rem;
+$font-size-xxxl:   3rem;
+$font-size-xxl:   2.5rem;
+$font-size-xl:   1.5rem;
+$font-size-lg:   1.25rem;
+$font-size-sm:   .875rem;
+$font-size-xs:   .75rem;
+$font-size-xxs:   .625rem;
+
+$line-height-base: 1.5;
+
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.25rem;
+$font-size-h6: 1rem;
+
+// $headings-margin-bottom: ($spacer / 2);
+$headings-font-family:   inherit;
+$headings-font-weight:   500;
+$headings-line-height:   1.1;
+$headings-color:         inherit;
+
+$lead-font-size:   1.25rem;
+$lead-font-weight: 300;
+
+$small-font-size: 80%;
+
+$text-muted: $gray-light;
+
+// Images
+
+$image-path: "/assets/img/";
+
+// Components
+
+$spacing-xxxlarge:          72px;
+$spacing-xxlarge:           60px;
+$spacing-xlarge:            48px;
+$spacing-large:             36px;
+$spacing-base:              24px;
+$spacing-small:             18px;
+$spacing-xsmall:            12px;
+$spacing-xxsmall:           6px;
+$spacing-xxxsmall:          3px;
+
+// Buttons
+
+$btn-transparent-color:          #fff;
+$btn-transparent-bg:             transparent;
+$btn-transparent-border:         #fff;
+
+$btn-inverse-color:              #fff;
+$btn-inverse-bg:                 $neutral-80;
+$btn-inverse-border:             transparent;
+
+$btn-reverse-color:              $brand-primary;
+$btn-reverse-bg:                 #fff;
+$btn-reverse-border:             transparent;
+
+$btn-outline-color:              $brand-primary;
+$btn-outline-bg:                 #fff;
+$btn-outline-border:             $brand-primary;
+
+$btn-shy-color:                  $brand-primary;
+$btn-shy-bg:                     transparent;
+$btn-shy-border:                 transparent;
