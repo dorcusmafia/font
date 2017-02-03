@@ -263,7 +263,7 @@ html {
 
 body {
   font-family: "Source Serif Pro", Georgia, "Times New Roman", Times, serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: #1a1a1a;
   background-color: #fff; }
@@ -1447,7 +1447,7 @@ pre {
   display: block;
   width: 100%;
   padding: 0.5rem 0.75rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.25;
   color: #55595c;
   background-color: #fff;
@@ -1502,7 +1502,7 @@ select.form-control:focus::-ms-value {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-bottom: 0;
-  font-size: 1.25rem; }
+  font-size: 1rem; }
 
 .form-control-static {
   padding-top: 0.5rem;
@@ -1703,7 +1703,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   user-select: none;
   border: 1px solid transparent;
   padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   border-radius: 0.25rem; }
   .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
     outline: 5px auto -webkit-focus-ring-color;
@@ -2286,7 +2286,7 @@ tbody.collapse.in {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #1a1a1a;
   text-align: left;
   list-style: none;
@@ -2547,7 +2547,7 @@ tbody.collapse.in {
 .input-group-addon {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1.25;
   color: #55595c;
@@ -3818,7 +3818,7 @@ button.list-group-item-danger {
 
 .close {
   float: right;
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   font-weight: bold;
   line-height: 1;
   color: #000;
@@ -4103,7 +4103,7 @@ button.close {
 .popover-title {
   padding: 8px 14px;
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
   border-radius: 0.2375rem 0.2375rem 0 0; }
@@ -5484,7 +5484,7 @@ input-group .btn {
   background-color: rgba(86, 61, 124, 0.15);
   border: 1px solid rgba(86, 61, 124, 0.2); }
 
-body:after {
+.show-breakpoint:after {
   transition: 200ms all ease 0;
   content: 'Breakpoint: none';
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -5499,23 +5499,23 @@ body:after {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10; }
 
-body:after {
+.show-breakpoint:after {
   content: 'Breakpoint: xs'; }
 
 @media (min-width: 576px) {
-  body:after {
+  .show-breakpoint:after {
     content: 'Breakpoint: sm'; } }
 
 @media (min-width: 768px) {
-  body:after {
+  .show-breakpoint:after {
     content: 'Breakpoint: md'; } }
 
 @media (min-width: 992px) {
-  body:after {
+  .show-breakpoint:after {
     content: 'Breakpoint: lg'; } }
 
 @media (min-width: 1200px) {
-  body:after {
+  .show-breakpoint:after {
     content: 'Breakpoint: xl'; } }
 
 .header {
@@ -5563,7 +5563,7 @@ body:after {
   font-size: 1.15em; }
 
 .list-table-base {
-  font-size: 1.25rem; }
+  font-size: 1rem; }
 
 .list-table-sm {
   /*font-size: $font-size-sm;*/
@@ -5909,22 +5909,18 @@ body:after {
   .nav-local .nav-link:hover {
     /*background-color: rgba(255, 255, 255, 0.1);*/ }
 
-@media (min-width: 576px) {
-  .nav-main {
-    margin-left: 200px; } }
-
-.nav-main .nav-link {
-  color: #fff;
-  padding-top: 27px;
-  padding-right: 18px;
-  padding-bottom: 27px;
-  padding-left: 18px;
-  display: block;
-  float: left;
-  border-bottom: 0; }
-  .nav-main .nav-link:hover {
+.nav-main {
+  float: right; }
+  .nav-main a {
+    font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-weight: 600;
+    text-transform: uppercase;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.1); }
+    margin-right: 6px;
+    display: block;
+    float: left; }
+    .nav-main a:last-child {
+      margin-right: 0; }
 
 .popover {
   border: 1px solid rgba(0, 0, 0, 0.03); }
@@ -5976,17 +5972,31 @@ h5, .h5 {
 
 @media (min-width: 576px) {
   h1, .h1 {
-    font-size: 3.75rem; }
+    font-size: 3rem; }
   h2, .h2 {
-    font-size: 3.125rem; }
-  h3, .h3 {
     font-size: 2.5rem; }
+  h3, .h3 {
+    font-size: 2rem; }
   h4, .h4 {
-    font-size: 1.875rem; }
+    font-size: 1.5rem; }
   h5, .h5 {
-    font-size: 1.40625rem; }
+    font-size: 1.125rem; }
   h6, .h6 {
-    font-size: 1.25rem; } }
+    font-size: 1rem; } }
+
+@media (min-width: 576px) {
+  h1.fluid, .h1.fluid {
+    font-size: 7vw; }
+  h2.fluid, .h2.fluid {
+    font-size: 6vw; }
+  h3.fluid, .h3.fluid {
+    font-size: 5vw; }
+  h4.fluid, .h4.fluid {
+    font-size: 3vw; }
+  h5.fluid, .h5.fluid {
+    font-size: 2vw; }
+  h6.fluid, .h6.fluid {
+    font-size: 1vw; } }
 
 p + h2,
 p + .h2,
@@ -6004,11 +6014,11 @@ ol {
 
 ::selection {
   color: #fff;
-  background: rgba(0, 125, 197, 0.8); }
+  background: rgba(26, 26, 26, 0.6); }
 
 ::-moz-selection {
   color: #fff;
-  background: rgba(0, 125, 197, 0.8); }
+  background: rgba(26, 26, 26, 0.6); }
 
 .kicker {
   font-size: 0.75rem;
@@ -6020,18 +6030,21 @@ ol {
       font-size: 0.875rem; } }
 
 .lead {
-  font-size: 1.5625rem;
+  font-size: 1.25rem;
   font-weight: 400; }
   @media (min-width: 576px) {
     .lead {
-      font-size: 1.875rem; } }
+      font-size: 1.5rem; } }
+  @media (min-width: 576px) {
+    .lead.fluid {
+      font-size: 2.5vw; } }
 
 .large-text {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 3.125rem; }
+  font-size: 2.5rem; }
   @media (min-width: 576px) {
     .large-text {
-      font-size: 3.75rem; } }
+      font-size: 3rem; } }
 
 hr {
   margin-top: 18px;
@@ -6178,6 +6191,12 @@ a.text-danger:focus, a.text-danger:hover {
 a.text-reverse:focus, a.text-reverse:hover {
   color: #e6e6e6 !important; }
 
+.body-color {
+  color: #1a1a1a !important; }
+
+a.body-color:focus, a.body-color:hover {
+  color: black !important; }
+
 .bg-primary {
   background-color: #007dc5 !important; }
 
@@ -6258,16 +6277,37 @@ a.bg-danger:focus, a.bg-danger:hover {
  * Working
  */
 .logo {
-  font-size: 21px;
+  font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #1a1a1a;
   display: inline-block;
+  float: left;
   border-bottom: 0; }
 
 img {
   max-width: 100%;
   height: auto;
   display: inline-block; }
+
+.bg-img-cover {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  .bg-img-cover img {
+    display: none !important; }
+
+.bg-full {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .2;
+  transition: background-image .5s ease-in-out;
+  animation: fadeInImage 1.5s; }
+
+.region {
+  position: relative; }
 
 .region-xs {
   padding: 1vw; }
@@ -6286,5 +6326,8 @@ img {
 
 .region-full {
   min-height: 100vh; }
+
+.region-content {
+  z-index: 1; }
 
 /*# sourceMappingURL=../../none */

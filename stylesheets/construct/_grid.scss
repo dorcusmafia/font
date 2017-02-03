@@ -52,9 +52,9 @@
     background-color: rgba(86, 61, 124, 0.15);
     border: 1px solid rgba(86, 61, 124, 0.2);
 }
-// Dev: Breakpoint label
 
-body:after {
+// Dev: Breakpoint label
+.show-breakpoint:after {
     @include transition;
     content: 'Breakpoint: none';
     font-family: $font-family-sans-serif;
@@ -69,28 +69,29 @@ body:after {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
+
 @include media-breakpoint-up(xs) {
-    body:after {
+    .show-breakpoint:after {
         content: 'Breakpoint: xs';
     }
 }
 @include media-breakpoint-up(sm) {
-    body:after {
+    .show-breakpoint:after {
         content: 'Breakpoint: sm';
     }
 }
 @include media-breakpoint-up(md) {
-    body:after {
+    .show-breakpoint:after {
         content: 'Breakpoint: md';
     }
 }
 @include media-breakpoint-up(lg) {
-    body:after {
+    .show-breakpoint:after {
         content: 'Breakpoint: lg';
     }
 }
 @include media-breakpoint-up(xl) {
-    body:after {
+    .show-breakpoint:after {
         content: 'Breakpoint: xl';
     }
 }

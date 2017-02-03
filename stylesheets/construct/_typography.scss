@@ -56,6 +56,16 @@ h5, .h5 {
     h6, .h6 { font-size: ($font-size-base * 1); }       // 16px
 }
 
+// Fluid headings
+@include media-breakpoint-up(sm) {
+    h1, .h1 { &.fluid { font-size: 7vw; } }
+    h2, .h2 { &.fluid { font-size: 6vw; } }
+    h3, .h3 { &.fluid { font-size: 5vw; } }
+    h4, .h4 { &.fluid { font-size: 3vw; } }
+    h5, .h5 { &.fluid { font-size: 2vw; } }
+    h6, .h6 { &.fluid { font-size: 1vw; } }
+}
+
 p + h2,
 p + .h2,
 p + h3,
@@ -74,12 +84,12 @@ ol {
 
 ::selection {
     color: #fff;
-    background: rgba($brand-primary, .8);
+    background: rgba($neutral-90, .6);
 }
 
 ::-moz-selection {
     color: #fff;
-    background: rgba($brand-primary, .8);
+    background: rgba($neutral-90, .6);
 }
 
 .kicker {
@@ -99,6 +109,12 @@ ol {
 
     @include media-breakpoint-up(sm) {
         font-size: ($font-size-base * 1.5); // 24px
+    }
+
+    @include media-breakpoint-up(sm) {
+        &.fluid {
+            font-size: 2.5vw;
+        }
     }
 }
 
@@ -246,6 +262,7 @@ blockquote {
 @include text-emphasis-variant('.text-warning', $state-warning-text);
 @include text-emphasis-variant('.text-danger', $state-danger-text);
 @include text-emphasis-variant('.text-reverse', #fff);
+@include text-emphasis-variant('.body-color', $body-color);
 
 // Contextual backgrounds
 @include bg-variant('.bg-primary', $brand-primary);

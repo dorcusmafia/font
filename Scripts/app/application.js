@@ -63,4 +63,52 @@ require(['jquery', 'knockout', 'bootstrap', 'bootstrap-toolkit', 'scrollto', 'st
                 $(this).parent().css('position', 'relative');
             });
     }
+
+    // Get first child image of element and place it as background-image
+    $.fn.setBgImage = function () {
+        var articleImage = this.find('img');
+        var articleImageSrc = articleImage.attr('src');
+
+        articleImage.css('display', 'none');
+        this.css('background-image', 'url(' + articleImageSrc + ')');
+    };
+
+    // Items to set and remove background image on
+    (function($) {
+        $('.bg-img-cover').each(function() {
+            $(this).setBgImage();
+        });
+    })(jQuery);
+
+    // Collapse without ID:s
+    (function($) {
+        $.fn.collapseNext = function() {
+            return this.each(function() {
+                var trigger = $(this);
+                var target = trigger.next('.collapse-body');
+                var isOpen = trigger.hasClass('active');
+
+                trigger
+                    .toggleClass('active')
+                    .attr('aria-expanded', !isOpen);
+
+                target
+                    .toggleClass('active');
+            });
+        };
+    })(jQuery);
+
+    $('[data-toggle=collapse-next]').click(function() {
+        $(this).collapseNext('hide');
+    });
+
+    // Hyphenation
+    //$('.js-hyphenate').hyphenate('sv');
+
+    // Toggle breakpoint label
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && e.altKey && e.shiftKey && e.code === 'KeyB') {
+            $('body').toggleClass('show-breakpoint');
+        }
+    });
 });

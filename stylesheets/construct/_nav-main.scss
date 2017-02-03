@@ -2,23 +2,23 @@
 // --------------------------------------------------
 
 .nav-main {
+    float: right;
+    
     @include media-breakpoint-up(sm) {
-        margin-left: 200px;
     }
 
-    .nav-link {
+    a {
+        font-family: $font-family-monospace;
+        // font-size: $font-size-xs;
+        font-weight: 600;
+        text-transform: uppercase;
         color: #fff;
-        padding-top: 27px;
-        padding-right: $spacing-small;
-        padding-bottom: 27px;
-        padding-left: $spacing-small;
+        margin-right: $spacing-xxsmall;
         display: block;
         float: left;
-        border-bottom: 0;
 
-        &:hover {
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.1);
+        &:last-child {
+            margin-right: 0;
         }
     }
 }
