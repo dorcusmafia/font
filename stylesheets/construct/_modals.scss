@@ -24,7 +24,7 @@
 .modal-dialog {
 
     @include media-breakpoint-up(xs) {
-        padding: $spacing-xsmall;
+        padding: $spacing-xs;
     }
 
     @include media-breakpoint-up(sm) {

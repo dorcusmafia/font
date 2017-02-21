@@ -23,7 +23,7 @@
 
         i {
             @include transition;
-            margin-right: $spacing-xxsmall;
+            margin-right: $spacing-xxs;
 
             .active & {
                 transform: rotate(45deg);
@@ -51,8 +51,8 @@
 
 .accordion-toggle {
     text-decoration: none;
-    padding-left: $spacing-xsmall;
-    padding-right: $spacing-xsmall;
+    padding-left: $spacing-xs;
+    padding-right: $spacing-xs;
 
     &:after {
         @include transition(all 200ms ease);
@@ -222,7 +222,7 @@
     text-align: center;
     color: $body-color;
     width: 62px;
-    padding: $spacing-small 0 $spacing-small 0;
+    padding: $spacing-sm 0 $spacing-sm 0;
     position: absolute;
     background-color: #fff;
     border-radius: 31px;
@@ -230,7 +230,7 @@
 
     @include media-breakpoint-down(xs) {
         width: 50px;
-        padding: $spacing-xsmall 0 $spacing-xsmall 0;
+        padding: $spacing-xs 0 $spacing-xs 0;
         margin-top: 6px;
         border-radius: 25px;
     }
@@ -241,7 +241,7 @@
     font-size: $font-size-h3;
     line-height: $headings-line-height;
     color: $brand-secondary;
-    padding: $spacing-small $spacing-large $spacing-small $spacing-xsmall;
+    padding: $spacing-sm $spacing-lg $spacing-sm $spacing-xs;
     margin: 0 0 0 62px;
 
     @include media-breakpoint-down(xs) {
@@ -279,7 +279,7 @@
     }
 
     .guide-step-inner {
-        padding: 0 $spacing-xsmall $spacing-xxsmall;
+        padding: 0 $spacing-xs $spacing-xxs;
     }
 }
 

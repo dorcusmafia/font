@@ -4,7 +4,7 @@
     "private": true,
     "devDependencies": {
         "autoprefixer": "^6.5.3",
-        "bootstrap": "^4.0.0-alpha.5",
+        "bootstrap": "^4.0.0-alpha.6",
         "bootstrap-sass": "^3.3.5",
         "cssnano": "^3.8.1",
         "grunt-contrib-clean": "^1.0.0",

@@ -6,8 +6,8 @@
     @include transition(200ms all ease);
     font-weight: 500;
     border-width: 2px;
-    padding-right: $spacing-xxsmall;
-    padding-left: $spacing-xxsmall;
+    padding-right: $spacing-xxs;
+    padding-left: $spacing-xxs;
     background-color: rgba(0, 0, 0, 0.03);
     border: 0;
     border-radius: 0;
@@ -34,10 +34,10 @@
 
 fieldset {
     & + & {
-        margin-top: $spacing-large;
+        margin-top: $spacing-lg;
 
         @include media-breakpoint-up(md) {
-            margin-top: $spacing-xxlarge;
+            margin-top: $spacing-xxl;
         }
     }
 }
@@ -83,7 +83,7 @@ fieldset {
     font-size: $font-size-xxs;
     text-transform: uppercase;
     color: $neutral-50;
-    margin-bottom: $spacing-xxxsmall;
+    margin-bottom: $spacing-xxxs;
     display: block;
 }
 
@@ -96,15 +96,15 @@ fieldset {
 
     ul {
         margin: 0;
-        padding-left: $spacing-small;
+        padding-left: $spacing-sm;
     }
 }
 
 .help-block-alert {
-    padding-top: $spacing-xxxsmall;
-    padding-bottom: $spacing-xxxsmall;
-    padding-left: $spacing-xxsmall;
-    padding-right: $spacing-xxsmall;
+    padding-top: $spacing-xxxs;
+    padding-bottom: $spacing-xxxs;
+    padding-left: $spacing-xxs;
+    padding-right: $spacing-xxs;
     background-color: lighten($brand-tertiary, 20%);
 }
 
@@ -129,8 +129,8 @@ fieldset {
     cursor: pointer;
 
     &.btn {
-        padding-left: $spacing-xsmall;
-        padding-right: $spacing-xsmall;
+        padding-left: $spacing-xs;
+        padding-right: $spacing-xs;
     }
 
     &.btn:hover,
@@ -159,7 +159,7 @@ fieldset {
         display: inline-block;
         width: 1em;
         height: 1em;
-        margin-right: $spacing-xxsmall;
+        margin-right: $spacing-xxs;
         position: relative;
         top: 0.1em;
         transition: background-color, border-color, 0.1s linear;
@@ -194,9 +194,9 @@ fieldset {
         @include icon-checkbox;
         font-size: 24px;
         color: $neutral-20;
-        margin-right: $spacing-xxsmall;
+        margin-right: $spacing-xxs;
         position: relative;
-        top: $spacing-xxsmall;
+        top: $spacing-xxs;
     }
 
     input:checked ~ &:before,
@@ -268,7 +268,7 @@ fieldset {
             text-align: right;
             border-width: 0 0 1px 0;
             cursor: text;
-            padding: 10px $spacing-xxsmall 9px;
+            padding: 10px $spacing-xxs 9px;
             border-style: solid;
             border-color: $brand-danger;
         }
@@ -276,13 +276,13 @@ fieldset {
 
     .input-sm + .validationMessage {
         @include media-breakpoint-up(md) {
-            padding: 7px $spacing-xxsmall;
+            padding: 7px $spacing-xxs;
         }
     }
 
     .input-lg + .validationMessage {
         @include media-breakpoint-up(md) {
-            padding: 15px $spacing-xxsmall;
+            padding: 15px $spacing-xxs;
         }
     }
 }
@@ -290,12 +290,12 @@ fieldset {
 .validationMessage {
     font-size: $font-size-xs;
     color: $brand-danger;
-    margin: $spacing-xxsmall 0 $spacing-xsmall;
+    margin: $spacing-xxs 0 $spacing-xs;
     display: inline-block;
 
     &:before {
         @include exclamation-triangle;
-        margin-right: $spacing-xxsmall;
+        margin-right: $spacing-xxs;
     }
 }
 

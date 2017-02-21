@@ -1,0 +1,30 @@
+figure {
+    margin-bottom: 1.5em;
+    position: relative;
+    overflow: hidden;
+}
+
+figcaption {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    transition: 0.2s all ease-in;
+
+    @include media-breakpoint-up(md) {
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.075);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 10%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &:hover {
+        @include media-breakpoint-up(md) {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+}

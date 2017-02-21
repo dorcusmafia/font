@@ -117,10 +117,10 @@
 }
 
 .list-cell {
-    padding-top: $spacing-xxsmall;
-    padding-right: $spacing-xsmall;
-    padding-bottom: $spacing-xxsmall;
-    padding-left: $spacing-xxsmall;
+    padding-top: $spacing-xxs;
+    padding-right: $spacing-xs;
+    padding-bottom: $spacing-xxs;
+    padding-left: $spacing-xxs;
     /*display: table-cell;*/
 
     /*float: left;*/
@@ -132,17 +132,17 @@
 
 
     .list-table-lg & {
-        padding-top: $spacing-xsmall;
-        padding-right: $spacing-small;
-        padding-bottom: $spacing-xsmall;
-        padding-left: $spacing-small;
+        padding-top: $spacing-xs;
+        padding-right: $spacing-sm;
+        padding-bottom: $spacing-xs;
+        padding-left: $spacing-sm;
     }
 
     .list-table-xs & {
-        padding-top: $spacing-xxxsmall;
-        padding-right: $spacing-xxsmall;
-        padding-bottom: $spacing-xxxsmall;
-        padding-left: $spacing-xxsmall;
+        padding-top: $spacing-xxxs;
+        padding-right: $spacing-xxs;
+        padding-bottom: $spacing-xxxs;
+        padding-left: $spacing-xxs;
     }
 
     .list-table-flush & {

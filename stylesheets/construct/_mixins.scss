@@ -52,7 +52,7 @@
 
 @mixin list-table-indicator-variant($parent, $color) {
     #{$parent} {
-        box-shadow: inset $spacing-xxxsmall 0 0 0 $color;
+        box-shadow: inset $spacing-xxxs 0 0 0 $color;
     }
 }
 

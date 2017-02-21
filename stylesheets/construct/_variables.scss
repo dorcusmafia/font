@@ -139,15 +139,15 @@ $padding-small-horizontal:  10px !default;
 $padding-xs-vertical:       1px !default;
 $padding-xs-horizontal:     5px !default;
 
-$spacing-xxxlarge:          72px !default;
-$spacing-xxlarge:           60px !default;
-$spacing-xlarge:            48px !default;
-$spacing-large:             36px !default;
+$spacing-xxxl:          72px !default;
+$spacing-xxl:           60px !default;
+$spacing-xl:            48px !default;
+$spacing-lg:             36px !default;
 $spacing-base:              24px !default;
-$spacing-small:             18px !default;
-$spacing-xsmall:            12px !default;
-$spacing-xxsmall:           6px !default;
-$spacing-xxxsmall:          3px !default;
+$spacing-sm:             18px !default;
+$spacing-xs:            12px !default;
+$spacing-xxs:           6px !default;
+$spacing-xxxs:          3px !default;
 
 $line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
 $line-height-small:         1.5 !default;
@@ -172,11 +172,11 @@ $caret-width-large:         5px !default;
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
 //** Padding for `<th>`s and `<td>`s.
-$table-cell-padding:            $spacing-xsmall !default;
+$table-cell-padding:            $spacing-xs !default;
 //** Padding for cells in `.table-condensed`.
-$table-condensed-cell-padding:  $spacing-xxsmall !default;
+$table-condensed-cell-padding:  $spacing-xxs !default;
 //** Padding for cells in `.table-comortable`.
-$table-comfortable-cell-padding:  $spacing-small !default;
+$table-comfortable-cell-padding:  $spacing-sm !default;
 
 //** Default background color used for all tables.
 $table-bg:                      transparent !default;
@@ -801,8 +801,8 @@ $list-group-link-heading-color: #333 !default;
 //##
 
 $panel-bg:                    #fff !default;
-$panel-body-padding:          $spacing-xsmall $spacing-small !default; //15px !default;
-$panel-heading-padding:       $spacing-small !default; //10px 15px !default;
+$panel-body-padding:          $spacing-xs $spacing-sm !default; //15px !default;
+$panel-heading-padding:       $spacing-sm !default; //10px 15px !default;
 $panel-footer-padding:        $panel-heading-padding !default;
 $panel-border-radius:         $border-radius-base !default;
 

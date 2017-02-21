@@ -8,8 +8,8 @@
     font-weight: 600;
     text-decoration: none;
     white-space: normal;
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
+    padding-left: $spacing-sm;
+    padding-right: $spacing-sm;
     border-width: 2px;
     border-color: transparent;
     cursor: pointer;
@@ -47,8 +47,8 @@
 }
 
 .btn-lg {
-    padding-left: ($spacing-small * 1.5);
-    padding-right: ($spacing-small * 1.5);
+    padding-left: ($spacing-sm * 1.5);
+    padding-right: ($spacing-sm * 1.5);
 }
 
 .btn-sm {
@@ -132,7 +132,7 @@
 
 .action-secondary {
     position: absolute;
-    right: $spacing-xsmall;
-    top: $spacing-xsmall;
+    right: $spacing-xs;
+    top: $spacing-xs;
     border-bottom: 0;
 }

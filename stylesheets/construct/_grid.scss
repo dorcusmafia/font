@@ -68,30 +68,25 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
-}
 
-@include media-breakpoint-up(xs) {
-    .show-breakpoint:after {
+    @include media-breakpoint-up(xs) {
         content: 'Breakpoint: xs';
     }
-}
-@include media-breakpoint-up(sm) {
-    .show-breakpoint:after {
+
+    @include media-breakpoint-up(sm) {
         content: 'Breakpoint: sm';
     }
-}
-@include media-breakpoint-up(md) {
-    .show-breakpoint:after {
+
+    @include media-breakpoint-up(md) {
         content: 'Breakpoint: md';
     }
-}
-@include media-breakpoint-up(lg) {
-    .show-breakpoint:after {
+
+    @include media-breakpoint-up(lg) {
         content: 'Breakpoint: lg';
     }
 }
+
+
 @include media-breakpoint-up(xl) {
-    .show-breakpoint:after {
         content: 'Breakpoint: xl';
-    }
 }
