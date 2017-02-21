@@ -422,8 +422,8 @@ output {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
+  font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 600;
   line-height: 1.1;
   color: inherit; }
 
@@ -5913,7 +5913,7 @@ input-group .btn {
   float: right; }
   .nav-main a {
     font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     color: #fff;
     margin-right: 6px;
