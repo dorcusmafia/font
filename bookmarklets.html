@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo area · Construct IT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding-top: 5vmax;
+            padding-bottom: 5vmax;
+        }
+
+        .blog-post {
+            padding-bottom: 4vmax;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="img/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="blog-header">
+            <h1 class="blog-title display-3">Bookmarklets</h1>
+            <p class="lead blog-description">Bookmarklets för användning med Google Chrome.</p>
+            <br>
+            <br>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-sm-8 blog-main">
+                <div class="blog-post">
+                    <h2 class="blog-post-title">SMH GetObject JSON</h2>
+                    <p>Se ett objekts JSON data som kommer från Quedro.</p>
+                    <ul>
+                        <li>Dra denna knapp/länk till bokmärkesfältet i Chrome:
+                            <br>
+                            <a class="btn btn-primary" href="javascript:(function(){var urlCurrent=window.location;var objId=window.location.href.match(/gid=(.*)/);var urlJson='http://countwordsfree.com/jsonviewer?url=https://svenskamaklarhuset.se/api/services/ObjectPage/GetObject-ObjectPage.php?gid='+objId[1];var urlTarget;if(objId.length>0){window.location=urlJson}}());">SMH JSON</a></li>
+                        <li>Gå till en objektsida.</li>
+                        <li>Klicka på bookmarklet:en som du nu har i bokmärkesfältet. </li>
+                        <li>Du skickas till en onlinetjänst som visar upp JSON data för objektet.</li>
+                        <li>Du kan växla till <code>Tree View Mode</code></li>
+                        <li>Du kan söka.</li>
+                    </ul>
+                </div>
+                <div class="blog-post">
+                    <h2 class="blog-post-title">SMH växla ett objekt mellan olika miljöer</h2>
+                    <p>Växla visning av ett objekt mellan Prod - Stage, Prod - Test, Prod - Local.</p>
+                    <ul>
+                        <li>Dra dessa knappar/länkar till bokmärkesfältet i Chrome:
+                            <br>
+                            <a class="btn btn-primary" href="javascript:(function(){var urlCurrent=window.location;var urlStage='http://wp.smh2016.stage.constructit.se/objekt/?gid=';var urlLive='https://svenskamaklarhuset.se/objekt/?gid=';var urlTarget;var objId=window.location.href.match(/gid=(.*)/);if(objId.length>0){if(window.location.href.indexOf('wp.smh2016.stage')>-1){urlTarget=urlLive}else{urlTarget=urlStage}window.location=urlTarget+objId[1]}}());">Toggle Prod > Stage</a>
+                            <a class="btn btn-primary" href="javascript:(function(){var urlCurrent=window.location;var urlTest='http://wp.smh2016.test.constructit.se/objekt/?gid=';var urlLive='https://svenskamaklarhuset.se/objekt/?gid=';var urlTarget;var objId=window.location.href.match(/gid=(.*)/);if(objId.length>0){if(window.location.href.indexOf('wp.smh2016.test')>-1){urlTarget=urlLive}else{urlTarget=urlTest}window.location=urlTarget+objId[1]}}());">Toggle Prod > Test</a>
+                            <a class="btn btn-primary" href="javascript:(function(){var urlCurrent=window.location;var urlLocal='http://localhost:14393/objekt/?gid=';var urlLive='https://svenskamaklarhuset.se/objekt/?gid=';var urlTarget;var objId=window.location.href.match(/gid=(.*)/);if(objId.length>0){if(window.location.href.indexOf('localhost')>-1){urlTarget=urlLive}else{urlTarget=urlLocal}window.location=urlTarget+objId[1]}}());">Toggle Prod > Local</a>
+                        </li>
+                        <li>Gå till en objektsida.</li>
+                        <li>Klicka på bookmarklet:en som du nu har i bokmärkesfältet. </li>
+                        <li>Samma objekt visas i den miljön som du valde.</li>
+                    </ul>
+                </div>
+                <div class="blog-post">
+                    <h2 class="blog-post-title">SMH Reco uppgifter</h2>
+                    <p>Hämta en medarbetares Reco-uppgifter (venueId och employeeId).</p>
+                    <ul>
+                        <li>Dra denna knapp/länk till bokmärkesfältet i Chrome:
+                            <br>
+                            <a class="btn btn-primary" href="javascript:(function(){ console.clear(); console.log(window.VenueData.venueName + '\nReco Venue ID: ' + window.VenueData.venueId + '\nReco Employee ID: ' + window.VenueData.employeeId); alert(window.VenueData.venueName + '\nReco Venue ID: ' + window.VenueData.venueId + '\nReco Employee ID: ' + window.VenueData.employeeId); })();">Reco ID</a></li>
+                        <li>Gå till en mäklares Reco-sida (här finns alla <a href="https://www.reco.se/sok/s?q=svenska+m%C3%A4klarhuset&page=1">SMH:s kontor</a> listade, klicka på ett kontor för att se medarbetare som tillhör kontoret).</li>
+                        <li>Klicka på bookmarklet:en som du nu har i bokmärkesfältet. </li>
+                        <li>En alert visas med Reco-uppgifter (samma information skrivs också ut i console). </li>
+                        <li>Du kan kopiera <code>CTRL + C</code> informationen i alert:en.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-3 blog-sidebar">
+                <div class="sidebar-module sidebar-module-inset">
+                    <h4>Vad är en bookmarklet?</h4>
+                    <p>"A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. Bookmarklets are unobtrusive JavaScripts stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually JavaScript programs." <a href="https://www.google.se/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwj_9vXsi4nNAhVI3SwKHQgkAbcQFggoMAE&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBookmarklet&usg=AFQjCNGA2aXGvPzG9KO98nUJtq2Q6Zafww&sig2=fsQIfUk8vjc2CuB181p60g">Wikipedia</a></p>
+                </div>
+                <br>
+                <div class="sidebar-module">
+                    <h4>Referenslänkar</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="http://code.tutsplus.com/tutorials/create-bookmarklets-the-right-way--net-18154">Create Bookmarklets - The Right Way</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+
+</html>

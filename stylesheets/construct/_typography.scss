@@ -1,6 +1,23 @@
 // Typography
 // --------------------------------------------------
 
+html {
+    font-size: 16px;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 16px;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 18px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+    }
+}
+
+
 body {
     // background-color: $neutral-10;
 }
@@ -64,14 +81,14 @@ h5, .h5 {
 }
 
 // Fluid headings
-@include media-breakpoint-up(sm) {
-    h1, .h1 { &.fluid { font-size: 7vw; } }
-    h2, .h2 { &.fluid { font-size: 6vw; } }
-    h3, .h3 { &.fluid { font-size: 5vw; } }
-    h4, .h4 { &.fluid { font-size: 3vw; } }
-    h5, .h5 { &.fluid { font-size: 2vw; } }
-    h6, .h6 { &.fluid { font-size: 1vw; } }
-}
+// @include media-breakpoint-up(sm) {
+//     h1, .h1 { &.fluid { font-size: 7vw; } }
+//     h2, .h2 { &.fluid { font-size: 6vw; } }
+//     h3, .h3 { &.fluid { font-size: 5vw; } }
+//     h4, .h4 { &.fluid { font-size: 3vw; } }
+//     h5, .h5 { &.fluid { font-size: 2vw; } }
+//     h6, .h6 { &.fluid { font-size: 1vw; } }
+// }
 
 p + h2,
 p + .h2,
@@ -211,16 +228,21 @@ hr {
 
 blockquote {
     padding: 10%;
+    margin-bottom: 1.5rem;
     position: relative;
     border-top: 1px solid $neutral-90;
     border-bottom: 1px solid $neutral-90;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 2rem;
+    }
 
     p {
         font-size: 42px;
         font-weight: 700;
         line-height: 1.1;
         text-indent: -0.45em;
-        margin-bottom: 24px;
+        margin-bottom: $spacing-base;
 
         &:before {
             content: '\201C';
@@ -238,8 +260,12 @@ blockquote {
         font-style: normal;
         text-transform: uppercase;
 
+        @include media-breakpoint-up(md) {
+            font-size: $font-size-sm;
+        }
+
         &:before {
-            content: '\2014 \00A0';
+            content: '—\00A0';
         }
     }
 }

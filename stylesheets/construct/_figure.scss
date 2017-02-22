@@ -1,7 +1,11 @@
 figure {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
     position: relative;
     overflow: hidden;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 2rem;
+    }
 }
 
 figcaption {
@@ -25,6 +29,31 @@ figcaption {
     &:hover {
         @include media-breakpoint-up(md) {
             background-color: rgba(0, 0, 0, 0.7);
+
+            .reveal {
+                opacity: 1;
+            }
+        }
+    }
+
+    .reveal {
+        opacity: 0;
+        transition: 0.2s all ease-in;
+    }
+
+    .label {
+        font-family: $font-family-monospace;
+        font-size: $font-size-xs;
+        font-weight: 600;
+        // text-transform: uppercase;
+        display: inline-block;
+
+        @include media-breakpoint-up(md) {
+            font-size: $font-size-sm;
+        }
+
+        + .label {
+            margin-left: $spacing-sm;
         }
     }
 }
