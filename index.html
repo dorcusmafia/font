@@ -338,11 +338,14 @@
     // Replace the 'ytplayer' element with an <iframe> and
     // YouTube player after the API code downloads.
     var player;
+    var vidElement = document.getElementsByClassName('video-container')[0];
+    var vidIdAttr = vidElement.getAttribute('data-videosourceid');
 
     function onYouTubePlayerAPIReady() {
         player = new YT.Player('ytplayer', {
             height: '360',
-            videoId: $('.video-container').data('videosourceid'),
+            // videoId: $('.video-container').data('videosourceid'),
+            videoId: vidIdAttr,
             width: '640',
             playerVars: {
                 autohide: 1,        // Hide video controls when playing
