@@ -50,20 +50,4 @@ figcaption {
         opacity: 0;
         transition: 0.2s all ease-in;
     }
-
-    .label {
-        font-family: $font-family-sans-serif;
-        font-size: $font-size-xxxs;
-        font-weight: 800;
-        text-transform: uppercase;
-        display: inline-block;
-
-        @include media-breakpoint-up(md) {
-            font-size: $font-size-xs;
-        }
-
-        + .label {
-            margin-left: $spacing-sm;
-        }
-    }
 }

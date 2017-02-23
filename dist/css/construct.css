@@ -6345,17 +6345,6 @@ figcaption {
   figcaption .reveal {
     opacity: 0;
     transition: 0.2s all ease-in; }
-  figcaption .label {
-    font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 0.5rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    display: inline-block; }
-    @media (min-width: 768px) {
-      figcaption .label {
-        font-size: 0.75rem; } }
-    figcaption .label + .label {
-      margin-left: 18px; }
 
 .footer {
   font-size: 13px;
@@ -7110,12 +7099,11 @@ a {
     text-decoration: none;
     outline: 1px dotted #007dc5;
     outline-offset: 1px; }
+  .text-reverse a {
+    color: inherit; }
 
 p {
   margin-bottom: 18px; }
-  @media (min-width: 768px) {
-    p.fluid {
-      font-size: 1.5vw; } }
 
 h1, .h1,
 h2, .h2,
@@ -7142,7 +7130,7 @@ h5, .h5 {
   h5, .h5 {
     font-size: 1.4rem; }
   h6, .h6 {
-    font-size: 1.1rem; } }
+    font-size: 1.2rem; } }
 
 p + h2,
 p + .h2,
@@ -7171,9 +7159,6 @@ ol {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.02em; }
-  @media (min-width: 576px) {
-    .kicker {
-      font-size: 0.875rem; } }
 
 .lead {
   font-size: 1.4rem;
@@ -7201,6 +7186,8 @@ hr {
       hr.hr-sm {
         margin-top: 18px;
         margin-bottom: 18px; } }
+  .text-reverse hr {
+    border-color: #fff; }
 
 .separator-v {
   font-size: 150%;
@@ -7208,6 +7195,8 @@ hr {
   margin: 0 6px;
   border-left: 1px solid #333333;
   margin: 0 12px; }
+  .text-reverse .separator-v {
+    border-color: #fff; }
 
 .separator-h {
   margin-bottom: 24px;
@@ -7215,6 +7204,8 @@ hr {
   @media (min-width: 576px) {
     .separator-h {
       margin-bottom: 36px; } }
+  .text-reverse .separator-h {
+    border-color: #fff; }
 
 .preheader {
   font-size: 0.875rem;
@@ -7277,6 +7268,12 @@ a.text-secondary:focus, a.text-secondary:hover {
 
 a.text-tertiary:focus, a.text-tertiary:hover {
   color: #ccad00 !important; }
+
+.text-quaternary {
+  color: #6f42a6 !important; }
+
+a.text-quaternary:focus, a.text-quaternary:hover {
+  color: #573382 !important; }
 
 .text-inverse {
   color: #1a1a1a !important; }
@@ -7344,6 +7341,12 @@ a.bg-secondary:focus, a.bg-secondary:hover {
 a.bg-tertiary:focus, a.bg-tertiary:hover {
   background-color: #ccad00 !important; }
 
+.bg-quaternary {
+  background-color: #6f42a6 !important; }
+
+a.bg-quaternary:focus, a.bg-quaternary:hover {
+  background-color: #573382 !important; }
+
 .bg-inverse {
   background-color: #1a1a1a !important; }
 
@@ -7407,11 +7410,16 @@ a.bg-danger:focus, a.bg-danger:hover {
  */
 .logo {
   font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 900;
   display: inline-block;
   float: left;
   border-bottom: 0; }
+  .logo sup {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    vertical-align: super; }
 
 .section-header {
   width: 100%;
@@ -7505,29 +7513,30 @@ img {
 
 .contact-card {
   font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 600; }
+  font-weight: 600;
+  line-height: 1.8; }
   @media (min-width: 768px) {
     .contact-card {
       font-size: 0.75rem; } }
   @media (min-width: 992px) {
     .contact-card {
       font-size: 0.625rem; } }
-  .contact-card .name {
-    font-size: 1.5rem;
-    font-weight: 900;
-    margin-bottom: 6px; }
-    @media (min-width: 768px) {
-      .contact-card .name {
-        font-size: 1.25rem; } }
-    @media (min-width: 992px) {
-      .contact-card .name {
-        font-size: 1rem; } }
-  .contact-card .email a,
-  .contact-card .mobile a {
+  .contact-card a {
     color: inherit; }
 
 .contact-details {
   list-style: none;
   padding-left: 0; }
+
+.label {
+  font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block; }
+  @media (min-width: 768px) {
+    .label {
+      font-size: 0.75rem; } }
+  .label + .label {
+    margin-left: 18px; }
 
 /*# sourceMappingURL=../../none */

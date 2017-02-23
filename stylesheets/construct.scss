@@ -83,11 +83,18 @@
  */
 .logo {
     font-family: $font-family-sans-serif;
-    font-size: $font-size-lg;
-    font-weight: 700;
+    font-size: $font-size-xl;
+    font-weight: 900;
     display: inline-block;
     float: left;
     border-bottom: 0;
+
+    sup {
+        font-size: $font-size-xxs;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        vertical-align: super;
+    }
 }
 
 .section-header {
@@ -213,6 +220,7 @@ img {
 .contact-card {
     font-family: $font-family-sans-serif;
     font-weight: 600;
+    line-height: 1.8;
 
     @include media-breakpoint-up(md) {
         font-size: $font-size-xs;
@@ -222,33 +230,28 @@ img {
         font-size: $font-size-xxs;
     }
 
-    .name {
-        font-size: $font-size-xl;
-        font-weight: 900;
-        margin-bottom: $spacing-xxs;
-
-        @include media-breakpoint-up(md) {
-            font-size: $font-size-lg;
-        }
-
-        @include media-breakpoint-up(lg) {
-            font-size: $font-size-base;
-        }
-    }
-
-    .title {
-
-    }
-
-    .email,
-    .mobile {
-        a {
-            color: inherit;
-        }
+    a {
+        color: inherit;
     }
 }
 
 .contact-details {
     list-style: none;
     padding-left: 0;
+}
+
+.label {
+    font-family: $font-family-sans-serif;
+    // font-size: $font-size-sm;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: inline-block;
+
+    @include media-breakpoint-up(md) {
+        font-size: $font-size-xs;
+    }
+
+    + .label {
+        margin-left: $spacing-sm;
+    }
 }

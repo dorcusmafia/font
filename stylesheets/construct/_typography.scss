@@ -1,6 +1,7 @@
 // Typography
 // --------------------------------------------------
 
+// Responsive typography
 html {
     font-size: 12px;
 
@@ -21,11 +22,6 @@ html {
     }
 }
 
-
-body {
-    // background-color: $neutral-10;
-}
-
 a {
     @include transition(200ms color ease);
     @include transition(200ms background-color ease);
@@ -39,16 +35,14 @@ a {
     &:focus {
         @include focus-default;
     }
+
+    .text-reverse & {
+        color: inherit;
+    }
 }
 
 p {
     margin-bottom: $spacing-sm;
-
-    @include media-breakpoint-up(md) {
-        &.fluid {
-            font-size: 1.5vw;
-        }
-    }
 }
 
 h1, .h1,
@@ -56,7 +50,6 @@ h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5 {
-    // letter-spacing: -0.015em;
     margin-bottom: $spacing-sm;
 
     &.light {
@@ -64,34 +57,14 @@ h5, .h5 {
     }
 }
 
-// h3, .h3 {
-//     line-height: 1.2;
-// }
-//
-// h4, .h4,
-// h5, .h5 {
-//     line-height: 1.3;
-// }
-
-// Responsive headings
 @include media-breakpoint-up(sm) {
-    h1, .h1 { font-size: ($font-size-base * 3.2); }       // 48px
-    h2, .h2 { font-size: ($font-size-base * 2.8); }     // 40px
-    h3, .h3 { font-size: ($font-size-base * 2.2); }       // 32px
-    h4, .h4 { font-size: ($font-size-base * 1.8); }     // 24px
-    h5, .h5 { font-size: ($font-size-base * 1.4); }   // 18px
-    h6, .h6 { font-size: ($font-size-base * 1.1); }       // 16px
+    h1, .h1 { font-size: ($font-size-base * 3.2); }
+    h2, .h2 { font-size: ($font-size-base * 2.8); }
+    h3, .h3 { font-size: ($font-size-base * 2.2); }
+    h4, .h4 { font-size: ($font-size-base * 1.8); }
+    h5, .h5 { font-size: ($font-size-base * 1.4); }
+    h6, .h6 { font-size: ($font-size-base * 1.2); }
 }
-
-// Fluid headings
-// @include media-breakpoint-up(sm) {
-//     h1, .h1 { &.fluid { font-size: 7vw; } }
-//     h2, .h2 { &.fluid { font-size: 6vw; } }
-//     h3, .h3 { &.fluid { font-size: 5vw; } }
-//     h4, .h4 { &.fluid { font-size: 3vw; } }
-//     h5, .h5 { &.fluid { font-size: 2vw; } }
-//     h6, .h6 { &.fluid { font-size: 1vw; } }
-// }
 
 p + h2,
 p + .h2,
@@ -124,33 +97,19 @@ ol {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.02em;
-
-    @include media-breakpoint-up(sm) {
-        font-size: $font-size-sm;
-    }
 }
 
 .lead {
-    font-size: ($font-size-base * 1.4); // 20px
+    font-size: ($font-size-base * 1.4);
     font-weight: 400;
-
-    // @include media-breakpoint-up(sm) {
-    //     font-size: ($font-size-base * 1.5); // 24px
-    // }
-
-    // @include media-breakpoint-up(sm) {
-    //     &.fluid {
-    //         font-size: 2.5vw;
-    //     }
-    // }
 }
 
 .large-text {
     font-family: $font-family-sans-serif;
-    font-size: ($font-size-base * 2.5); // 40px
+    font-size: ($font-size-base * 2.5);
 
     @include media-breakpoint-up(sm) {
-        font-size: ($font-size-base * 3); // 48px
+        font-size: ($font-size-base * 3);
     }
 }
 
@@ -173,7 +132,14 @@ hr {
             margin-bottom: $spacing-sm;
         }
     }
+
+    .text-reverse & {
+        border-color: #fff;
+    }
 }
+
+// Separators
+// --------------------------------------------------
 
 .separator-v {
     font-size: 150%;
@@ -184,6 +150,10 @@ hr {
     @include media-breakpoint-up(xs) {
         margin: 0 $spacing-xs;
     }
+
+    .text-reverse & {
+        border-color: #fff;
+    }
 }
 
 .separator-h {
@@ -193,9 +163,13 @@ hr {
     @include media-breakpoint-up(sm) {
         margin-bottom: $spacing-lg;
     }
+
+    .text-reverse & {
+        border-color: #fff;
+    }
 }
 
-// Page header
+// Preheader
 // --------------------------------------------------
 
 .preheader {
@@ -268,6 +242,7 @@ blockquote {
 @include text-emphasis-variant('.text-primary', $brand-primary);
 @include text-emphasis-variant('.text-secondary', $brand-secondary);
 @include text-emphasis-variant('.text-tertiary', $brand-tertiary);
+@include text-emphasis-variant('.text-quaternary', $brand-quaternary);
 @include text-emphasis-variant('.text-inverse', $brand-inverse);
 @include text-emphasis-variant('.text-neutral', $neutral-12);
 @include text-emphasis-variant('.text-success', $state-success-text);
@@ -281,6 +256,7 @@ blockquote {
 @include bg-variant('.bg-primary', $brand-primary);
 @include bg-variant('.bg-secondary', $brand-secondary);
 @include bg-variant('.bg-tertiary', $brand-tertiary);
+@include bg-variant('.bg-quaternary', $brand-quaternary);
 @include bg-variant('.bg-inverse', $brand-inverse);
 @include bg-variant('.bg-neutral', $neutral-5);
 @include bg-variant('.bg-success', $state-success-bg);
