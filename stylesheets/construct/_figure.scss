@@ -9,15 +9,15 @@ figure {
 }
 
 figcaption {
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.15), 0 0 10px rgba(255, 255, 255, 0.075);
     padding-top: 3vh;
     padding-bottom: 3vh;
     background-color: rgba(0, 0, 0, 0);
     overflow: hidden;
     transition: 0.2s all ease-in;
+    opacity: 0.9;
 
     @include media-breakpoint-up(md) {
-        text-shadow: 0 0 3px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.075);
-        color: rgba(255, 255, 255, 0.8);
         padding: 10%;
         position: absolute;
         top: 0;
@@ -26,9 +26,19 @@ figcaption {
         bottom: 0;
     }
 
+    .text-reverse & {
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.075);
+        opacity: 0.8;
+    }
+
     &:hover {
         @include media-breakpoint-up(md) {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(255, 255, 255, 0.5);
+            opacity: 0.95;
+
+            .text-reverse & {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
 
             .reveal {
                 opacity: 1;
@@ -42,14 +52,14 @@ figcaption {
     }
 
     .label {
-        font-family: $font-family-monospace;
-        font-size: $font-size-xs;
-        font-weight: 600;
-        // text-transform: uppercase;
+        font-family: $font-family-sans-serif;
+        font-size: $font-size-xxxs;
+        font-weight: 800;
+        text-transform: uppercase;
         display: inline-block;
 
         @include media-breakpoint-up(md) {
-            font-size: $font-size-sm;
+            font-size: $font-size-xs;
         }
 
         + .label {

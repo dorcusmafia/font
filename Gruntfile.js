@@ -14,12 +14,15 @@ module.exports = function (grunt) {
         npmPath + '/select2/dist/js/select2.js',
         npmPath + '/responsive-toolkit/dist/bootstrap-toolkit.js',
         npmPath + '/jquery.scrollto/jquery.scrollTo.js',
+        npmPath + '/jquery.localscroll/jquery.localScroll.js',
         npmPath + '/sticky-kit/dist/sticky-kit.js',
         npmPath + '/knockout/build/output/knockout-latest.js',
         npmPath + '/knockout-mapping/dist/knockout.mapping.js',
         npmPath + '/requirejs/require.js',
         npmPath + '/requirejs-text/text.js',
         npmPath + '/tether/dist/js/tether.js',
+        npmPath + '/hypher/dist/jquery.hypher.js',
+        '/scripts/app/sv.js', // This jQuery version cannot be downloaded via npm
     ];
 
     grunt.initConfig({
@@ -76,13 +79,13 @@ module.exports = function (grunt) {
             options: {
                 separator: ';'
             },
-            js: {
-                src: [
-                    'scripts/init.js',
-                    'scripts/app/application.js'
-                ],
-                dest: 'dist/js/construct.js'
-            },
+            // js: {
+            //     src: [
+            //         'scripts/init.js',
+            //         'scripts/app/application.js'
+            //     ],
+            //     dest: 'dist/js/construct.js'
+            // },
             css: {
                 src: [
                     'node_modules/bootstrap/dist/css/bootstrap.css',
@@ -101,7 +104,10 @@ module.exports = function (grunt) {
                     beautify: true
                 },
                 files: {
-                    'dist/js/construct.min.js': 'dist/js/construct.js'
+                    'dist/js/construct.min.js': [
+                        'scripts/init.js',
+                        'scripts/app/application.js'
+                    ],
                 }
             },
             prod: {
@@ -186,7 +192,7 @@ module.exports = function (grunt) {
                 ],
                 tasks: [
                     'clean:js',
-                    'concat:js',
+                    // 'concat:js',
                     'uglify:dev'
                 ]
             },

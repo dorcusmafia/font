@@ -4,11 +4,14 @@
     paths: {
         'bootstrap': 'lib/bootstrap',
         'bootstrap-toolkit': 'lib/bootstrap-toolkit',
+        'hypher': 'lib/jquery.hypher',
+        'hypher-sv': 'lib/sv',
         'jquery': 'lib/jquery',
         'knockout': 'lib/knockout-latest',
         'ko.mapping': 'lib/knockout.mapping',
         'moment': 'lib/moment-with-locales',
         'scrollto': 'lib/jquery.scrollTo',
+        'localscroll': 'lib/jquery.localScroll',
         'select2': 'lib/select2',
         'sticky-kit': 'lib/sticky-kit',
         'tether': 'lib/tether',
@@ -22,11 +25,17 @@
         'bootstrap-toolkit': {
             deps: ['jquery']
         },
+        'hypher-sv': {
+            deps: ['jquery', 'hypher']
+        },
         'ko.mapping': {
             deps: ['knockout']
         },
         'scrollto': {
             deps: ['jquery']
+        },
+        'localscroll': {
+            deps: ['jquery', 'scrollto']
         },
         'sticky-kit': {
             deps: ['jquery']

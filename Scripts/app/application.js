@@ -1,18 +1,21 @@
-require(['jquery', 'knockout', 'bootstrap', 'bootstrap-toolkit', 'scrollto', 'sticky-kit'], function($, ko, bootstrap) {
+require(['jquery', 'bootstrap', 'bootstrap-toolkit', 'localscroll', 'sticky-kit', 'hypher-sv'], function($, bootstrap) {
+    // Hyphenation
+    $('.js-hyphenate').hyphenate('sv');
+
     // Local navigation
-    $('a[href^="#"].js-scrollto').click(function(e) {
-        // Prevent the jump and the #hash from appearing on the address bar
-        e.preventDefault();
-        // Scroll the window, stop any previous animation, stop on user manual scroll
-        // Check https://github.com/flesler/jquery.scrollTo for more customizability
-        $(window).stop(true).scrollTo(this.hash, {
-            duration: 500,
-            //interrupt: true,
-            offset: {
-                top: -50,
-            }
-        });
-    });
+    // $('a[href^="#"].js-scrollto').click(function(e) {
+    //     // Prevent the jump and the #hash from appearing on the address bar
+    //     e.preventDefault();
+    //     // Scroll the window, stop any previous animation, stop on user manual scroll
+    //     // Check https://github.com/flesler/jquery.scrollTo for more customizability
+    //     $(window).stop(true).scrollTo(this.hash, {
+    //         duration: 500,
+    //         //interrupt: true,
+    //         offset: {
+    //             top: -50,
+    //         }
+    //     });
+    // });
 
     // Execute according to BS breakpoints
     // https://github.com/leafo/sticky-kit/issues/85#issuecomment-247878339
@@ -51,8 +54,8 @@ require(['jquery', 'knockout', 'bootstrap', 'bootstrap-toolkit', 'scrollto', 'st
     // https://github.com/leafo/sticky-kit
     function makeSticky() {
         $('.js-sticky').stick_in_parent({
-            // container: $('header'),
-            // offset_top: 100
+            //container: $('body'),
+            //offset_top: 50
         });
         // Fix: https://github.com/leafo/sticky-kit/issues/31#issuecomment-51740033
         $('.js-sticky')
@@ -101,9 +104,6 @@ require(['jquery', 'knockout', 'bootstrap', 'bootstrap-toolkit', 'scrollto', 'st
     $('[data-toggle=collapse-next]').click(function() {
         $(this).collapseNext('hide');
     });
-
-    // Hyphenation
-    //$('.js-hyphenate').hyphenate('sv');
 
     // Toggle breakpoint label
     document.addEventListener('keydown', function(e) {

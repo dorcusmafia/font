@@ -2,7 +2,7 @@
 // --------------------------------------------------
 
 html {
-    font-size: 16px;
+    font-size: 12px;
 
     @include media-breakpoint-up(sm) {
       font-size: 16px;
@@ -14,6 +14,10 @@ html {
 
     @include media-breakpoint-up(lg) {
       font-size: 20px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 22px;
     }
 }
 
@@ -52,8 +56,7 @@ h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5 {
-    letter-spacing: -0.015em;
-    margin-top: 0;
+    // letter-spacing: -0.015em;
     margin-bottom: $spacing-sm;
 
     &.light {
@@ -72,12 +75,12 @@ h5, .h5 {
 
 // Responsive headings
 @include media-breakpoint-up(sm) {
-    h1, .h1 { font-size: ($font-size-base * 3); }       // 48px
-    h2, .h2 { font-size: ($font-size-base * 2.5); }     // 40px
-    h3, .h3 { font-size: ($font-size-base * 2); }       // 32px
-    h4, .h4 { font-size: ($font-size-base * 1.5); }     // 24px
-    h5, .h5 { font-size: ($font-size-base * 1.125); }   // 18px
-    h6, .h6 { font-size: ($font-size-base * 1); }       // 16px
+    h1, .h1 { font-size: ($font-size-base * 3.2); }       // 48px
+    h2, .h2 { font-size: ($font-size-base * 2.8); }     // 40px
+    h3, .h3 { font-size: ($font-size-base * 2.2); }       // 32px
+    h4, .h4 { font-size: ($font-size-base * 1.8); }     // 24px
+    h5, .h5 { font-size: ($font-size-base * 1.4); }   // 18px
+    h6, .h6 { font-size: ($font-size-base * 1.1); }       // 16px
 }
 
 // Fluid headings
@@ -128,18 +131,18 @@ ol {
 }
 
 .lead {
-    font-size: ($font-size-base * 1.25); // 20px
+    font-size: ($font-size-base * 1.4); // 20px
     font-weight: 400;
 
-    @include media-breakpoint-up(sm) {
-        font-size: ($font-size-base * 1.5); // 24px
-    }
+    // @include media-breakpoint-up(sm) {
+    //     font-size: ($font-size-base * 1.5); // 24px
+    // }
 
-    @include media-breakpoint-up(sm) {
-        &.fluid {
-            font-size: 2.5vw;
-        }
-    }
+    // @include media-breakpoint-up(sm) {
+    //     &.fluid {
+    //         font-size: 2.5vw;
+    //     }
+    // }
 }
 
 .large-text {
@@ -195,28 +198,6 @@ hr {
 // Page header
 // --------------------------------------------------
 
-.page-header {
-    font-size: 32px;
-    font-weight: 700;
-    padding: 0;
-    margin-top: $spacing-lg;
-    margin-bottom: $spacing-base;
-    border-bottom: 0;
-
-    @include media-breakpoint-up(sm) {
-        font-size: $font-size-xxxl;
-        margin-top: $spacing-xl;
-        margin-bottom: $spacing-lg;
-    }
-
-    @include media-breakpoint-up(lg) {
-        font-size: $font-size-xxxxl;
-    }
-}
-
-// Page header
-// --------------------------------------------------
-
 .preheader {
     font-size: $font-size-sm;
     margin-top: $spacing-base;
@@ -238,9 +219,9 @@ blockquote {
     }
 
     p {
-        font-size: 42px;
+        font-size: ($font-size-base * 1.8);
         font-weight: 700;
-        line-height: 1.1;
+        line-height: 1.2;
         text-indent: -0.45em;
         margin-bottom: $spacing-base;
 
@@ -254,15 +235,12 @@ blockquote {
     }
 
     cite {
-        font-family: $font-family-monospace;
+        font-family: $font-family-sans-serif;
         font-size: $font-size-xs;
         font-weight: 700;
         font-style: normal;
-        text-transform: uppercase;
-
-        @include media-breakpoint-up(md) {
-            font-size: $font-size-sm;
-        }
+        line-height: 1.5;
+        display: block;
 
         &:before {
             content: '—\00A0';
