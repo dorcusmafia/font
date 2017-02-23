@@ -212,7 +212,7 @@ img {
 
 .contact-card {
     font-family: $font-family-sans-serif;
-    // font-size: $font-size-xxs;
+    font-weight: 600;
 
     @include media-breakpoint-up(md) {
         font-size: $font-size-xs;
@@ -223,9 +223,17 @@ img {
     }
 
     .name {
-        font-size: $font-size-sm;
-        font-weight: 800;
+        font-size: $font-size-xl;
+        font-weight: 900;
         margin-bottom: $spacing-xxs;
+
+        @include media-breakpoint-up(md) {
+            font-size: $font-size-lg;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-base;
+        }
     }
 
     .title {

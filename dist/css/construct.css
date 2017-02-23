@@ -7504,7 +7504,8 @@ img {
   pointer-events: none; }
 
 .contact-card {
-  font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600; }
   @media (min-width: 768px) {
     .contact-card {
       font-size: 0.75rem; } }
@@ -7512,9 +7513,15 @@ img {
     .contact-card {
       font-size: 0.625rem; } }
   .contact-card .name {
-    font-size: 0.875rem;
-    font-weight: 800;
+    font-size: 1.5rem;
+    font-weight: 900;
     margin-bottom: 6px; }
+    @media (min-width: 768px) {
+      .contact-card .name {
+        font-size: 1.25rem; } }
+    @media (min-width: 992px) {
+      .contact-card .name {
+        font-size: 1rem; } }
   .contact-card .email a,
   .contact-card .mobile a {
     color: inherit; }
