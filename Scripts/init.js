@@ -1,4 +1,4 @@
-﻿require.config({
+﻿require.config({ 
     waitSeconds: 200,
     baseUrl: 'scripts/',
     paths: {

@@ -7057,14 +7057,21 @@ input-group .btn {
 .nav-main {
   float: right; }
   .nav-main a {
-    font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 900;
     text-transform: uppercase;
+    letter-spacing: 0.03em;
     color: #fff;
     margin-right: 12px;
     display: block;
     float: left; }
+    @media (min-width: 576px) {
+      .nav-main a {
+        font-size: 0.625rem; } }
+    @media (min-width: 768px) {
+      .nav-main a {
+        font-size: 0.5rem; } }
     .nav-main a:last-child {
       margin-right: 0; }
 
@@ -7399,7 +7406,7 @@ a.bg-danger:focus, a.bg-danger:hover {
  * Working
  */
 .logo {
-  font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   display: inline-block;
@@ -7410,7 +7417,8 @@ a.bg-danger:focus, a.bg-danger:hover {
   width: 100%;
   padding: 4vw;
   position: absolute;
-  z-index: 100; }
+  z-index: 100;
+  transition: all 0.2s ease; }
 
 img {
   max-width: 100%;
@@ -7494,5 +7502,25 @@ img {
   top: 0;
   left: 0;
   pointer-events: none; }
+
+.contact-card {
+  font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  @media (min-width: 768px) {
+    .contact-card {
+      font-size: 0.75rem; } }
+  @media (min-width: 992px) {
+    .contact-card {
+      font-size: 0.625rem; } }
+  .contact-card .name {
+    font-size: 0.875rem;
+    font-weight: 800;
+    margin-bottom: 6px; }
+  .contact-card .email a,
+  .contact-card .mobile a {
+    color: inherit; }
+
+.contact-details {
+  list-style: none;
+  padding-left: 0; }
 
 /*# sourceMappingURL=../../none */

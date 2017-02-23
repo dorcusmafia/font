@@ -4,18 +4,24 @@
 .nav-main {
     float: right;
 
-    @include media-breakpoint-up(sm) {
-    }
-
     a {
-        font-family: $font-family-monospace;
+        font-family: $font-family-sans-serif;
         font-size: $font-size-xs;
-        font-weight: 700;
+        font-weight: 900;
         text-transform: uppercase;
+        letter-spacing: 0.03em;
         color: #fff;
         margin-right: $spacing-xs;
         display: block;
         float: left;
+
+        @include media-breakpoint-up(sm) {
+            font-size: $font-size-xxs;
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: $font-size-xxxs;
+        }
 
         &:last-child {
             margin-right: 0;
