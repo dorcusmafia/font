@@ -7477,9 +7477,6 @@ img {
 .region-oversize {
   min-height: 105vh; }
 
-.region-content {
-  z-index: 1; }
-
 .ratio-1-1 {
   padding-top: 100%;
   /* 1:1 Aspect Ratio */ }
