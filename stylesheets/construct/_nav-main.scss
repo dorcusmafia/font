@@ -20,7 +20,7 @@
         }
 
         @include media-breakpoint-up(md) {
-            font-size: $font-size-xxxs;
+            // font-size: $font-size-xxxs;
         }
 
         &:last-child {

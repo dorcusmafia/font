@@ -242,16 +242,16 @@ img {
 
 .label {
     font-family: $font-family-sans-serif;
-    // font-size: $font-size-sm;
     font-weight: 800;
     text-transform: uppercase;
+    margin-right: $spacing-sm;
     display: inline-block;
 
     @include media-breakpoint-up(md) {
         font-size: $font-size-xs;
     }
 
-    + .label {
-        margin-left: $spacing-sm;
+    &:last-child {
+        margin-right: 0;
     }
 }
