@@ -1,4 +1,4 @@
-﻿require.config({ 
+﻿require.config({
     waitSeconds: 200,
     baseUrl: 'scripts/',
     paths: {
@@ -9,6 +9,7 @@
         'jquery': 'lib/jquery',
         'knockout': 'lib/knockout-latest',
         'ko.mapping': 'lib/knockout.mapping',
+        'lazy-load': 'lib/jquery.lazy',
         'moment': 'lib/moment-with-locales',
         'scrollto': 'lib/jquery.scrollTo',
         'localscroll': 'lib/jquery.localScroll',
@@ -30,6 +31,9 @@
         },
         'ko.mapping': {
             deps: ['knockout']
+        },
+        'lazy-load': {
+            deps: ['jquery']
         },
         'scrollto': {
             deps: ['jquery']

@@ -1,6 +1,25 @@
-require(['jquery', 'bootstrap', 'bootstrap-toolkit', 'localscroll', 'sticky-kit', 'hypher-sv'], function($, bootstrap) {
+require(['jquery', 'bootstrap', 'bootstrap-toolkit', 'localscroll', 'sticky-kit', 'hypher-sv', 'lazy-load'], function($, bootstrap) {
     // Hyphenation
     $('.js-hyphenate').hyphenate('sv');
+
+    // Lazy load
+    // $(function() {
+        $('.lazy, figure').Lazy({
+            delay: 1000,
+            enableThrottle: true,
+            throttle: 250,
+            placeholder: "data:image/gif;base64,R0lGODlhEALAPQAPzl5uLr9Nrl8e7...",
+            scrollDirection: 'vertical',
+            effect: 'fadeIn',
+            visibleOnly: true,
+            beforeLoad: function(element) {
+                console.log('BEFORE');
+            },
+            onError: function(element) {
+                console.log('error loading ' + element.data('src'));
+            }
+        });
+    // });
 
     // Local navigation
     // $('a[href^="#"].js-scrollto').click(function(e) {

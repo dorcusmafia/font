@@ -6335,6 +6335,9 @@ figcaption {
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.075);
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 0.8; }
+    @media (min-width: 768px) {
+      .text-reverse figcaption {
+        background-color: transparent; } }
   @media (min-width: 768px) {
     figcaption:hover {
       background-color: rgba(255, 255, 255, 0.5);
@@ -7528,16 +7531,16 @@ img {
   list-style: none;
   padding-left: 0; }
 
-.label {
+.tag {
   font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 800;
   text-transform: uppercase;
   margin-right: 18px;
   display: inline-block; }
   @media (min-width: 768px) {
-    .label {
+    .tag {
       font-size: 0.75rem; } }
-  .label:last-child {
+  .tag:last-child {
     margin-right: 0; }
 
 /*# sourceMappingURL=../../none */

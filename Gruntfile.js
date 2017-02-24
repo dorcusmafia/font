@@ -21,6 +21,7 @@ module.exports = function (grunt) {
         npmPath + '/requirejs/require.js',
         npmPath + '/requirejs-text/text.js',
         npmPath + '/tether/dist/js/tether.js',
+        npmPath + '/jquery-lazy/jquery.lazy.js',
         npmPath + '/hypher/dist/jquery.hypher.js',
         '/scripts/app/sv.js', // This jQuery version cannot be downloaded via npm
     ];
