@@ -29,6 +29,33 @@
     animation-duration: $duration;
 }
 
+// Fade out
+// --------------------------------------------------
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+// Class version
+.fade-out {
+    opacity: 1; // Make things invisible on start
+    animation: fadeOut ease-in 1; // Call the animation named fadeIn, use animation ease-in and repeat it only 1 time
+    animation-fill-mode: forwards; // On completion remain on last keyframe value (opacity: 1)
+    animation-duration: 1000ms;
+}
+
+// Mixin version
+@mixin fade-out($duration: 500ms) {
+    opacity: 0; // Make element invisible on start
+    animation: fadeOut ease-in 1; // Call animation: fadeIn, use animation ease-in and repeat it 1 time
+    animation-fill-mode: forwards; // On completion remain on last keyframe value (opacity: 1)
+    animation-duration: $duration;
+}
+
 // Scale in
 // --------------------------------------------------
 @keyframes scaleIn {
@@ -97,3 +124,42 @@
         opacity: 0.4;
     }
 }
+
+
+
+
+
+
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animated.slideDown,
+.headroom--top.slideDown {
+    animation: slideDown linear 1;
+    animation-fill-mode: forwards; // On completion remain on last keyframe value (opacity: 1), transform: scale(1)
+    animation-duration: 300ms;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+// .animated.slideUp {
+//     animation: slideUp linear 1;
+//     animation-fill-mode: forwards; // On completion remain on last keyframe value (opacity: 1), transform: scale(1)
+//     animation-duration: 300ms;
+// }

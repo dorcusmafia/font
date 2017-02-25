@@ -1,4 +1,7 @@
-require(['jquery', 'bootstrap', 'bootstrap-toolkit', 'localscroll', 'sticky-kit', 'hypher-sv', 'lazy-load'], function($, bootstrap) {
+require(['jquery', 'bootstrap', 'bootstrap-toolkit', 'localscroll', 'sticky-kit', 'hypher-sv', 'lazy-load', 'headroom', 'headroom-jquery'], function($, bootstrap, headroom) {
+    // Sticky header
+    $('header').headroom();
+
     // Hyphenation
     $('.js-hyphenate').hyphenate('sv');
 
@@ -39,35 +42,35 @@ require(['jquery', 'bootstrap', 'bootstrap-toolkit', 'localscroll', 'sticky-kit'
     // Execute according to BS breakpoints
     // https://github.com/leafo/sticky-kit/issues/85#issuecomment-247878339
     // Wrap IIFE around your code
-    (function(viewport) {
-        // Executes only in XS breakpoint
-        if (viewport.is('xs')) {}
-
-        // Executes in MD and LG breakpoints
-        if (viewport.is('>=md')) {
-            makeSticky();
-            console.log('load sticky');
-        }
-
-        // Executes in XS and SM breakpoints
-        if (viewport.is('<md')) {}
-
-        // Execute each time window size changes
-        $(window).resize(
-            viewport.changed(function() {
-                if (viewport.is('>=md')) {
-                    makeSticky();
-                    $(document.body).trigger("sticky_kit:recalc");
-                    console.log('resize sticky');
-                }
-
-                if (viewport.is('<md')) {
-                    $('.js-sticky').trigger('sticky_kit:detach');
-                    console.log('detach sticky');
-                }
-            })
-        );
-    })(ResponsiveBootstrapToolkit);
+    // (function(viewport) {
+    //     // Executes only in XS breakpoint
+    //     if (viewport.is('xs')) {}
+    //
+    //     // Executes in MD and LG breakpoints
+    //     if (viewport.is('>=md')) {
+    //         makeSticky();
+    //         console.log('load sticky');
+    //     }
+    //
+    //     // Executes in XS and SM breakpoints
+    //     if (viewport.is('<md')) {}
+    //
+    //     // Execute each time window size changes
+    //     $(window).resize(
+    //         viewport.changed(function() {
+    //             if (viewport.is('>=md')) {
+    //                 makeSticky();
+    //                 $(document.body).trigger("sticky_kit:recalc");
+    //                 console.log('resize sticky');
+    //             }
+    //
+    //             if (viewport.is('<md')) {
+    //                 $('.js-sticky').trigger('sticky_kit:detach');
+    //                 console.log('detach sticky');
+    //             }
+    //         })
+    //     );
+    // })(ResponsiveBootstrapToolkit);
 
     // Sticky general
     // https://github.com/leafo/sticky-kit
@@ -85,6 +88,8 @@ require(['jquery', 'bootstrap', 'bootstrap-toolkit', 'localscroll', 'sticky-kit'
                 $(this).parent().css('position', 'relative');
             });
     }
+
+    //makeSticky();
 
     // Get first child image of element and place it as background-image
     $.fn.setBgImage = function () {

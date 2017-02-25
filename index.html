@@ -29,8 +29,8 @@
             </div>
         </div>
     </header> -->
-    <header class="section-header js-sticky">
-        <a href="index.html" class="logo text-reverse">
+    <header class="header js-sticky d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo">
             construct<sup>it</sup>
         </a>
         <nav class="nav-main">
@@ -107,6 +107,7 @@
                     <br>
                 </div>
             </div>
+            <!-- <img src="assets/img/annie-spratt-124994.jpg" class="lazy" alt=""> -->
             <div class="row">
                 <div class="col-md-8">
                     <figure class="bg-img-cover ratio-4-3 text-reverse">
@@ -312,9 +313,94 @@
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="dist/js/lib/require.js"></script>
-<script src="dist/js/construct.min.js"></script>
+<!-- <script src="dist/js/lib/require.js"></script> -->
+<!-- <script src="dist/js/construct.min.js"></script> -->
+<script src="dist/js/libs.min.js"></script>
 <script>
+    // Sticky header
+    // $('header').headroom();
+    $('header').headroom({
+        'offset': 500,
+        'tolerance': {
+            'up': 5,
+            'down': 3
+        },
+        'classes': {
+            // 'initial': 'headroom',
+            // 'pinned': 'pinned',
+            // 'unpinned': 'unpinned'
+            "initial": "animated",
+            "pinned": "slideDown",
+            "unpinned": "slideUp"
+        }
+    });
+
+    // Hyphenation
+    $('.js-hyphenate').hyphenate('sv');
+
+    // Lazy load
+    $('.lazy, figure').Lazy({
+        delay: 1000,
+        enableThrottle: true,
+        throttle: 250,
+        placeholder: "data:image/gif;base64,R0lGODlhEALAPQAPzl5uLr9Nrl8e7...",
+        scrollDirection: 'vertical',
+        effect: 'fadeIn',
+        visibleOnly: true,
+        beforeLoad: function(element) {
+            console.log('BEFORE');
+        },
+        onError: function(element) {
+            console.log('error loading ' + element.data('src'));
+        }
+    });
+
+    // Get first child image of element and place it as background-image
+    $.fn.setBgImage = function () {
+        var articleImage = this.find('img');
+        var articleImageSrc = articleImage.attr('src');
+
+        articleImage.css('display', 'none');
+        this.css('background-image', 'url(' + articleImageSrc + ')');
+    };
+
+    // Items to set and remove background image on
+    (function($) {
+        $('.bg-img-cover').each(function() {
+            $(this).setBgImage();
+        });
+    })(jQuery);
+
+    // Collapse without ID:s
+    (function($) {
+        $.fn.collapseNext = function() {
+            return this.each(function() {
+                var trigger = $(this);
+                var target = trigger.next('.collapse-body');
+                var isOpen = trigger.hasClass('active');
+
+                trigger
+                    .toggleClass('active')
+                    .attr('aria-expanded', !isOpen);
+
+                target
+                    .toggleClass('active');
+            });
+        };
+    })(jQuery);
+
+    $('[data-toggle=collapse-next]').click(function() {
+        $(this).collapseNext('hide');
+    });
+
+    // Toggle breakpoint label
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && e.altKey && e.shiftKey && e.code === 'KeyB') {
+            $('body').toggleClass('show-breakpoint');
+        }
+    });
+
+    // YouTube
     // Load the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/player_api";

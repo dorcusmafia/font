@@ -10,18 +10,20 @@ module.exports = function (grunt) {
     var jsLibraryFiles = [
         npmPath + '/jquery/dist/jquery.js',
         npmPath + '/bootstrap/dist/js/bootstrap.js',
-        npmPath + '/moment/min/moment-with-locales.js',
-        npmPath + '/select2/dist/js/select2.js',
+        // npmPath + '/moment/min/moment-with-locales.js',
+        // npmPath + '/select2/dist/js/select2.js',
         npmPath + '/responsive-toolkit/dist/bootstrap-toolkit.js',
         npmPath + '/jquery.scrollto/jquery.scrollTo.js',
         npmPath + '/jquery.localscroll/jquery.localScroll.js',
         npmPath + '/sticky-kit/dist/sticky-kit.js',
-        npmPath + '/knockout/build/output/knockout-latest.js',
-        npmPath + '/knockout-mapping/dist/knockout.mapping.js',
-        npmPath + '/requirejs/require.js',
-        npmPath + '/requirejs-text/text.js',
+        // npmPath + '/knockout/build/output/knockout-latest.js',
+        // npmPath + '/knockout-mapping/dist/knockout.mapping.js',
+        // npmPath + '/requirejs/require.js',
+        // npmPath + '/requirejs-text/text.js',
         npmPath + '/tether/dist/js/tether.js',
         npmPath + '/jquery-lazy/jquery.lazy.js',
+        npmPath + '/headroom.js/dist/headroom.js',
+        npmPath + '/headroom.js/dist/jQuery.headroom.js',
         npmPath + '/hypher/dist/jquery.hypher.js',
         '/scripts/app/sv.js', // This jQuery version cannot be downloaded via npm
     ];
@@ -108,6 +110,10 @@ module.exports = function (grunt) {
                     'dist/js/construct.min.js': [
                         'scripts/init.js',
                         'scripts/app/application.js'
+                    ],
+                    'dist/js/libs.min.js': [
+                        'scripts/jquery.js',
+                        jsLibraryFiles
                     ],
                 }
             },

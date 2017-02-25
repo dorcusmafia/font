@@ -9,6 +9,8 @@
         'jquery': 'lib/jquery',
         'knockout': 'lib/knockout-latest',
         'ko.mapping': 'lib/knockout.mapping',
+        'headroom': 'lib/headroom',
+        'headroom-jquery': 'lib/jQuery.headroom',
         'lazy-load': 'lib/jquery.lazy',
         'moment': 'lib/moment-with-locales',
         'scrollto': 'lib/jquery.scrollTo',
@@ -26,6 +28,9 @@
         'bootstrap-toolkit': {
             deps: ['jquery']
         },
+        'headroom-jquery': {
+            deps: ['jquery', 'headroom']
+        },
         'hypher-sv': {
             deps: ['jquery', 'hypher']
         },
@@ -42,7 +47,7 @@
             deps: ['jquery', 'scrollto']
         },
         'sticky-kit': {
-            deps: ['jquery']
+            deps: ['jquery', 'bootstrap-toolkit']
         },
     }
 });
