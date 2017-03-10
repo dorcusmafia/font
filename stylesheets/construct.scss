@@ -30,7 +30,7 @@
 // @import "../node_modules/bootstrap/scss/button-group";
 // @import "../node_modules/bootstrap/scss/input-group";
 // @import "../node_modules/bootstrap/scss/custom-forms";
-// @import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/nav";
 // @import "../node_modules/bootstrap/scss/navbar";
 // @import "../node_modules/bootstrap/scss/card";
 // @import "../node_modules/bootstrap/scss/breadcrumb";
@@ -85,7 +85,8 @@
     font-family: $font-family-sans-serif;
     font-size: $font-size-xl;
     font-weight: 900;
-    color: #fff;
+    color: $body-color;
+    // color: #fff;
     padding-bottom: $spacing-xxs;
     display: block;
     border-bottom: 0;
@@ -101,8 +102,8 @@
         vertical-align: super;
     }
 
-    .headroom--not-top & {
-        color: $body-color;
+    .is-transparent & {
+        color: #fff;
     }
 }
 

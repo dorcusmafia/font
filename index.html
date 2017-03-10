@@ -17,30 +17,28 @@
 </head>
 
 <body>
-    <!-- <header class="section-header js-sticky">
-        <div class="row">
-            <div class="col">
-                <a href="index.html" class="logo text-reverse">construct</a>
-                <nav class="nav-main">
-                    <a href="#case">Case</a>
-                    <a href="#career">Karriär</a>
-                    <a href="#contact">Kontakt</a>
-                </nav>
-            </div>
-        </div>
-    </header> -->
-    <header class="header js-sticky d-flex align-items-center justify-content-between">
+    <header class="cd-auto-hide-header header is-transparent d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo">
             construct<sup>it</sup>
         </a>
         <nav class="nav-main">
-            <a href="#case">Case</a>
-            <a href="#career">Karriär</a>
-            <a href="#contact">Kontakt</a>
+            <button type="button" class="nav-main-toggle js-nav-main-open">
+                <svg id="icon-menu" viewBox="0 0 1024 1024">
+                    <title>Meny</title>
+                    <path class="" d="M128 213.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 725.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 469.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5z" fill="#fff" stroke-width="0">
+                    </path>
+                </svg>
+                <span class="nav-main-label">Meny</span>
+            </button>
+            <nav class="nav">
+                <a href="#case">Case</a>
+                <a href="#career">Karriär</a>
+                <a href="#contact">Kontakt</a>
+            </nav>
         </nav>
     </header>
     <div class="main" role="main">
-        <section id="start-alt" class="region region-md region-oversize text-reverse bg-primary d-flex align-items-center">
+        <section id="hero" class="region region-md region-oversize text-reverse bg-primary d-flex align-items-center">
             <div class="region-content">
                 <!-- <div class="video-background">
                     <div id="ytplayer" class="video-container" data-videosourceid="E5MO0h7NIqY"></div>
@@ -61,37 +59,6 @@
                 </div>
             </div>
         </section>
-        <!-- <section id="start" class="region region-md region-oversize text-reverse bg-primary">
-            <span id="top"></span>
-            <div class="bg-full bg-img-cover">
-                <img src="assets/img/iqhujvauqps-michael-mroczek.jpg" alt="">
-            </div>
-            <div class="row">
-                <div class="col js-sticky">
-                    <a href="index.html" class="logo text-reverse">construct</a>
-                    <nav class="nav-main">
-                        <a href="case.html">Case</a>
-                        <a href="jobb.html">Jobb</a>
-                        <a href="kontakt.html">Kontakt</a>
-                    </nav>
-                </div>
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-md-10">
-                    <h1>Solutions for digital challenges</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-8">
-                    <p class="lead">En strategisk webbyrå som skapar kreativa och tekniskt avancerade webbplatser med affärsnyttan i fokus.</p>
-                </div>
-            </div>
-        </section> -->
         <section id="case" class="region region-md">
             <div class="row">
                 <div class="col-md-8">
@@ -107,7 +74,6 @@
                     <br>
                 </div>
             </div>
-            <!-- <img src="assets/img/annie-spratt-124994.jpg" class="lazy" alt=""> -->
             <div class="row">
                 <div class="col-md-8">
                     <figure class="bg-img-cover ratio-4-3 text-reverse">
@@ -223,14 +189,15 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8 align-self-center">
-                        <!-- <p class="lead">Varje dag letar vi efter en “Rising star”...</p> -->
-                        <!-- <p>Construct är en strategisk webbyrå och helhetspartner, vilket betyder att vi jobbar kontinuerligt och långsiktigt med våra kunder. Vi ser därför till att vårt team består kreativa, skickliga och lösningsorienterade medarbetare.</p> -->
                         <p class="lead">Vi anser att den sociala sammanhållningen är det viktigaste på en arbetsplats och skickliga och trevliga kollegor är en enorm styrka och trygghet.</p>
                         <br>
                         <br>
-                        <p>
-                            <strong><a href="#" class="tag">Produktionsledare</a> <a href="#" class="tag">Design/Frontend</a> <a href="#" class="tag">Tech. Lead</a> <a href="#" class="tag">Praktik</a></strong>
-                        </p>
+                        <nav class="nav">
+                            <a href="#" class="tag">Produktionsledare</a>
+                            <a href="#" class="tag">Design/Frontend</a>
+                            <a href="#" class="tag">Tech. Lead</a>
+                            <a href="#" class="tag">Praktik</a>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -313,81 +280,57 @@
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<!-- <script src="dist/js/lib/require.js"></script> -->
-<!-- <script src="dist/js/construct.min.js"></script> -->
 <script src="dist/js/libs.min.js"></script>
+<script src="dist/js/cits.min.js"></script>
+<!-- <script src="dist/js/construct.min.js"></script> -->
 <script>
-    // Sticky header
-    // $('header').headroom();
-    $('header').headroom({
-        'offset': 500,
-        'tolerance': {
-            'up': 5,
-            'down': 3
-        },
-        'classes': {
-            // 'initial': 'headroom',
-            // 'pinned': 'pinned',
-            // 'unpinned': 'unpinned'
-            "initial": "animated",
-            "pinned": "slideDown",
-            "unpinned": "slideUp"
-        }
-    });
+    // Scroll to anchor
+    function scrollToAnchor() {
+        var verticalOffset = 0,
+            scrollSpeed = 500;
+
+        $('a[href^="#"]:not(a[href="#"])').click(function() {
+            $('html, body').animate({
+                scrollTop: $('[id="' + $.attr(this, 'href').substr(1) + '"]').offset().top + verticalOffset
+            }, scrollSpeed);
+            return false;
+        });
+    }
+
+    scrollToAnchor();
 
     // Hyphenation
     $('.js-hyphenate').hyphenate('sv');
 
-    // Lazy load
-    $('.lazy, figure').Lazy({
-        delay: 1000,
-        enableThrottle: true,
-        throttle: 250,
-        placeholder: "data:image/gif;base64,R0lGODlhEALAPQAPzl5uLr9Nrl8e7...",
-        scrollDirection: 'vertical',
-        effect: 'fadeIn',
-        visibleOnly: true,
-        beforeLoad: function(element) {
-            console.log('BEFORE');
-        },
-        onError: function(element) {
-            console.log('error loading ' + element.data('src'));
-        }
-    });
-
     // Get first child image of element and place it as background-image
     $.fn.setBgImage = function () {
-        var articleImage = this.find('img');
-        var articleImageSrc = articleImage.attr('src');
+        var articleImage = this.find('img'),
+            articleImageSrc = articleImage.attr('src');
 
         articleImage.css('display', 'none');
         this.css('background-image', 'url(' + articleImageSrc + ')');
     };
 
     // Items to set and remove background image on
-    (function($) {
-        $('.bg-img-cover').each(function() {
-            $(this).setBgImage();
-        });
-    })(jQuery);
+    $('.bg-img-cover').each(function() {
+        $(this).setBgImage();
+    });
 
     // Collapse without ID:s
-    (function($) {
-        $.fn.collapseNext = function() {
-            return this.each(function() {
-                var trigger = $(this);
-                var target = trigger.next('.collapse-body');
-                var isOpen = trigger.hasClass('active');
+    $.fn.collapseNext = function() {
+        return this.each(function() {
+            var trigger = $(this),
+                target = trigger.next('.collapse-body'),
+                isOpen = trigger.hasClass('active');
 
-                trigger
-                    .toggleClass('active')
-                    .attr('aria-expanded', !isOpen);
+            trigger
+                .toggleClass('active')
+                .attr('aria-expanded', !isOpen);
 
-                target
-                    .toggleClass('active');
-            });
-        };
-    })(jQuery);
+            target
+                .toggleClass('active');
+        });
+    };
 
     $('[data-toggle=collapse-next]').click(function() {
         $(this).collapseNext('hide');
@@ -400,43 +343,43 @@
         }
     });
 
-    // YouTube
-    // Load the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/player_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    // Replace the 'ytplayer' element with an <iframe> and
-    // YouTube player after the API code downloads.
-    var player;
-    var vidElement = document.getElementsByClassName('video-container')[0];
-    var vidIdAttr = vidElement.getAttribute('data-videosourceid');
-
-    function onYouTubePlayerAPIReady() {
-        player = new YT.Player('ytplayer', {
-            height: '360',
-            // videoId: $('.video-container').data('videosourceid'),
-            videoId: vidIdAttr,
-            width: '640',
-            playerVars: {
-                autoplay: 1,        // Auto-play the video on load
-                controls: 0,        // Hide player controls
-                enablejsapi: 1,     // The player can be controlled via Player API calls
-                fs: 0,              // Hide the full screen button
-                iv_load_policy: 3,  // Hide the Video Annotations
-                loop: 1,            // Run the video in a loop
-                modestbranding: 1,  // Hide the Youtube Logo
-                playlist: vidIdAttr,// Loop param only works if playlist param exists
-                showinfo: 0,        // Hide the video title
-                start: 6,           // Start at (seconds)
-            },
-            events: {
-                onReady: function(e) {
-                    e.target.mute();
-                }
-            }
-        });
-    }
+    // // YouTube
+    // // Load the IFrame Player API code asynchronously.
+    // var tag = document.createElement('script');
+    // tag.src = "https://www.youtube.com/player_api";
+    // var firstScriptTag = document.getElementsByTagName('script')[0];
+    // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    //
+    // // Replace the 'ytplayer' element with an <iframe> and
+    // // YouTube player after the API code downloads.
+    // var player;
+    // var vidElement = document.getElementsByClassName('video-container')[0];
+    // var vidIdAttr = vidElement.getAttribute('data-videosourceid');
+    //
+    // function onYouTubePlayerAPIReady() {
+    //     player = new YT.Player('ytplayer', {
+    //         height: '360',
+    //         // videoId: $('.video-container').data('videosourceid'),
+    //         videoId: vidIdAttr,
+    //         width: '640',
+    //         playerVars: {
+    //             autoplay: 1,        // Auto-play the video on load
+    //             controls: 0,        // Hide player controls
+    //             enablejsapi: 1,     // The player can be controlled via Player API calls
+    //             fs: 0,              // Hide the full screen button
+    //             iv_load_policy: 3,  // Hide the Video Annotations
+    //             loop: 1,            // Run the video in a loop
+    //             modestbranding: 1,  // Hide the Youtube Logo
+    //             playlist: vidIdAttr,// Loop param only works if playlist param exists
+    //             showinfo: 0,        // Hide the video title
+    //             start: 6,           // Start at (seconds)
+    //         },
+    //         events: {
+    //             onReady: function(e) {
+    //                 e.target.mute();
+    //             }
+    //         }
+    //     });
+    // }
 </script>
 </html>

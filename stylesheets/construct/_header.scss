@@ -1,12 +1,27 @@
-﻿// Site header
+// Auto-Hiding Navigation - Simple
 // --------------------------------------------------
 
-.header {
+// Variables
+
+$color-3: rgba(255, 255, 255, 0.7);
+$header-height-small: 60px;
+$header-height: 80px;
+
+.cd-auto-hide-header {
     width: 100%;
     padding: 2vw 4vw;
-    // position: relative;
-    position: absolute;
-    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    // background-color: $color-3;
+    z-index: 10;
+    // Force hardware acceleration
+    transform: translateZ(0);
+    will-change: transform;
+    transition: transform 0.5s;
+    color: $body-color;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(6, 8, 8, 0.15);
 
     @include media-breakpoint-up(md) {
         padding: 1.5vw 4vw;
@@ -16,37 +31,171 @@
         padding: 1vw 4vw;
     }
 
-    &.is_stuck {
-        @include fade-in;
-        color: $body-color;
-        // background-color: rgba(255, 255, 255, 0.95);
-        background-color: #fff;
-        box-shadow: 0 0 2px rgba(6, 8, 8, 0.15);
+    &.is-hidden {
+        transform: translateY(-100%);
     }
 
-    &.headroom--not-top {
-        // @include fade-in;
-        // color: $body-color;
-        // background-color: rgba(255, 255, 255, 0.95);
+    &.is-transparent {
+        background-color: transparent;
+        box-shadow: none;
     }
-    //transition: all ease 300ms;
-    // position: fixed;
+}
 
-    &.slideDown {
-        // @include fade-in;
-        position: fixed;
-        background-color: #fff;
-        box-shadow: 0 0 2px rgba(6, 8, 8, 0.15);
-        //opacity: 1;
+.cd-auto-hide-header .nav-trigger {
+    /* vertically align its content */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $brand-primary;
+    height: 100%;
+    padding: 0 1em;
+    display: table;
+    right: 0;
+    border-left: 1px solid shade($color-3, 5%);
 
-        &.headroom--top {
-            background-color: transparent;
-            box-shadow: none;
+    span {
+        /* vertically align inside parent element */
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    em,
+    em::after,
+    em::before {
+        /* this is the menu icon */
+        width: 22px;
+        height: 2px;
+        display: block;
+        position: relative;
+        background-color: $brand-primary;
+        backface-visibility: hidden;
+    }
+
+    em {
+        /* this is the menu central line */
+        margin: 6px auto 14px;
+        transition: background-color 0.2s;
+    }
+
+    em::after,
+    em::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        transition: transform 0.2s;
+    }
+
+    em::before {
+        /* this is the menu icon top line */
+        transform: translateY(-6px);
+    }
+
+    em::after {
+        /* this is the menu icon bottom line */
+        transform: translateY(6px);
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+.cd-auto-hide-header.nav-open .nav-trigger {
+    em {
+        /* transform menu icon into a 'X' icon */
+        background-color: rgba($color-3, 0);
+    }
+
+    em::before {
+        /* rotate top line */
+        transform: rotate(-45deg);
+    }
+
+    em::after {
+        /* rotate bottom line */
+        transform: rotate(45deg);
+    }
+}
+
+.cd-primary-nav {
+    padding-right: 5%;
+    height: 100%;
+    display: inline-block;
+    float: right;
+
+    > ul {
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: $header-height-small;
+        left: 0;
+        background-color: $color-3;
+        box-shadow: 0 14px 20px rgba(#000, .2);
+        z-index: 2;
+
+        a {
+            /* target primary-nav links */
+            font-size: 1.8rem;
+            line-height: 50px;
+            color: $brand-primary;
+            padding-left: 5%;
+            height: 50px;
+            display: block;
+            border-top: 1px solid shade($color-3, 5%);
+
+            &.active,
+            &:hover {
+                color: $brand-secondary;
+            }
         }
     }
+    @include media-breakpoint-up(lg) {
+        /* vertically align its content */
+        display: table;
 
-    &.slideUp {
-        // @include fade-out;
-        opacity: 0;
+        > ul {
+            /* vertically align inside parent element */
+            display: table-cell;
+            vertical-align: middle;
+            /* reset mobile style */
+            padding: 0;
+            width: auto;
+            position: relative;
+            top: 0;
+            background-color: transparent;
+            box-shadow: none;
+            @include clearfix;
+
+            li {
+                margin-right: 1.5em;
+                display: inline-block;
+                float: left;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+
+            a {
+                /* reset mobile style */
+                line-height: normal;
+                height: auto;
+                padding: 0;
+                border: none;
+            }
+        }
+    }
+}
+
+.cd-primary-nav ul:target,
+.nav-open .cd-primary-nav ul {
+    /*
+		show primary nav - mobile only
+		:target is used to show navigation on no-js devices
+	*/
+    display: block;
+
+    @include media-breakpoint-up(lg) {
+        display: table-cell;
     }
 }
