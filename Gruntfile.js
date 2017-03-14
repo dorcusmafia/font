@@ -10,22 +10,11 @@ module.exports = function (grunt) {
     var jsLibraryFiles = [
         npmPath + '/jquery/dist/jquery.js',
         npmPath + '/bootstrap/dist/js/bootstrap.js',
-        // npmPath + '/moment/min/moment-with-locales.js',
-        // npmPath + '/select2/dist/js/select2.js',
         npmPath + '/responsive-toolkit/dist/bootstrap-toolkit.js',
-        npmPath + '/jquery.scrollto/jquery.scrollTo.js',
-        npmPath + '/jquery.localscroll/jquery.localScroll.js',
-        npmPath + '/sticky-kit/dist/sticky-kit.js',
-        // npmPath + '/knockout/build/output/knockout-latest.js',
-        // npmPath + '/knockout-mapping/dist/knockout.mapping.js',
-        // npmPath + '/requirejs/require.js',
-        // npmPath + '/requirejs-text/text.js',
         npmPath + '/tether/dist/js/tether.js',
-        npmPath + '/jquery-lazy/jquery.lazy.js',
-        npmPath + '/headroom.js/dist/headroom.js',
-        npmPath + '/headroom.js/dist/jQuery.headroom.js',
+        // npmPath + '/jquery-lazy/jquery.lazy.js',
         npmPath + '/hypher/dist/jquery.hypher.js',
-        '/scripts/app/sv.js', // This jQuery version cannot be downloaded via npm
+        'scripts/app/sv.js', // This jQuery version cannot be downloaded via npm. https://github.com/bramstein/hyphenation-patterns/blob/master/dist/browser/sv.js
     ];
 
     grunt.initConfig({
@@ -71,7 +60,6 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'dist/css/construct.min.css': 'dist/css/construct.css',
-                    'dist/css/lib.min.css': 'dist/css/lib.css'
                 }
             }
         },
@@ -89,12 +77,28 @@ module.exports = function (grunt) {
             //     ],
             //     dest: 'dist/js/construct.js'
             // },
-            css: {
-                src: [
-                    'node_modules/bootstrap/dist/css/bootstrap.css',
-                    'node_modules/select2/dist/css/select2.css'
-                ],
-                dest: 'dist/css/lib.css',
+            // css: {
+            //     src: [
+            //         'node_modules/bootstrap/dist/css/bootstrap.css',
+            //         'node_modules/select2/dist/css/select2.css'
+            //     ],
+            //     dest: 'dist/css/lib.css',
+            // }
+        },
+
+        // Copy files
+        // -----------------------------------------------------
+        copy: {
+            js: {
+                files: [
+                    {
+                        expand: true,
+                        src: jsLibraryFiles,
+                        dest: 'scripts/lib/',
+                        filter: 'isFile',
+                        flatten: true
+                    }
+                ]
             }
         },
 
@@ -111,6 +115,9 @@ module.exports = function (grunt) {
                         'scripts/init.js',
                         'scripts/app/application.js'
                     ],
+                    'dist/js/cits.min.js': [
+                        'scripts/app/nav-sticky.js'
+                    ],
                     'dist/js/libs.min.js': [
                         'scripts/jquery.js',
                         jsLibraryFiles
@@ -123,24 +130,18 @@ module.exports = function (grunt) {
                     beautify: false
                 },
                 files: {
-                    'dist/js/construct.min.js': 'dist/js/construct.js'
+                    'dist/js/construct.min.js': [
+                        'scripts/init.js',
+                        'scripts/app/application.js'
+                    ],
+                    'dist/js/cits.min.js': [
+                        'scripts/app/nav-sticky.js'
+                    ],
+                    'dist/js/libs.min.js': [
+                        'scripts/jquery.js',
+                        jsLibraryFiles
+                    ],
                 }
-            }
-        },
-
-        // Copy files to dist folder
-        // -----------------------------------------------------
-        copy: {
-            main: {
-                files: [
-                    {
-                        expand: true,
-                        src: jsLibraryFiles,
-                        dest: 'scripts/lib/',
-                        filter: 'isFile',
-                        flatten: true
-                    }
-                ]
             }
         },
 
@@ -148,10 +149,10 @@ module.exports = function (grunt) {
         // -----------------------------------------------------
         clean: {
             css: [
-                'dist/css/*.css'
+                'dist/css/**/*.css'
             ],
             js: [
-                'dist/js/*.js'
+                'dist/js/**/*.js'
             ]
         },
 
@@ -189,7 +190,7 @@ module.exports = function (grunt) {
                 tasks: [
                     'clean:css',
                     'sass',
-                    'concat:css',
+                    // 'concat:css',
                     'postcss'
                 ],
             },
@@ -223,7 +224,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-exec');
-    grunt.loadNpmTasks('grunt-newer');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-sass');
@@ -234,20 +234,20 @@ module.exports = function (grunt) {
         'exec:remove_writeprotection',
         'clean',
         'sass',
-        'concat',
+        // 'concat',
         'postcss',
         'jshint:dev',
+        'copy:js',
         'uglify:dev',
-        'copy',
         'watch'
     ]);
 
     grunt.registerTask('build', [
-       'clean',
-       'sass',
-       'concat',
-       'postcss',
-       'uglify:prod',
-       'copy'
+        'clean',
+        'sass',
+        // 'concat',
+        'postcss',
+        'copy:js',
+        'uglify:prod',
     ]);
 };
