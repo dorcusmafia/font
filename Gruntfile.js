@@ -14,7 +14,7 @@ module.exports = function (grunt) {
         npmPath + '/tether/dist/js/tether.js',
         // npmPath + '/jquery-lazy/jquery.lazy.js',
         npmPath + '/hypher/dist/jquery.hypher.js',
-        'scripts/app/sv.js', // This jQuery version cannot be downloaded via npm. https://github.com/bramstein/hyphenation-patterns/blob/master/dist/browser/sv.js
+        'src/js/app/sv.js', // This jQuery version cannot be downloaded via npm. https://github.com/bramstein/hyphenation-patterns/blob/master/dist/browser/sv.js
     ];
 
     grunt.initConfig({
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'dist/css/construct.css': 'stylesheets/construct.scss'
+                    'assets/css/construct.css': 'src/stylesheets/construct.scss'
                 }
             }
         },
@@ -48,7 +48,7 @@ module.exports = function (grunt) {
             options: {
                 map: {
                     inline: false,
-                    annotation: 'dist/css/maps/'
+                    annotation: 'assets/css/maps/'
                 },
                 processors: [
                     require('autoprefixer')({
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'dist/css/construct.min.css': 'dist/css/construct.css',
+                    'assets/css/construct.min.css': 'assets/css/construct.css',
                 }
             }
         },
@@ -94,7 +94,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         src: jsLibraryFiles,
-                        dest: 'scripts/lib/',
+                        dest: 'src/js/lib/',
                         filter: 'isFile',
                         flatten: true
                     }
@@ -111,15 +111,15 @@ module.exports = function (grunt) {
                     beautify: true
                 },
                 files: {
-                    'dist/js/construct.min.js': [
-                        'scripts/init.js',
-                        'scripts/app/application.js'
+                    'assets/js/construct.min.js': [
+                        'src/js/init.js',
+                        'src/js/app/application.js'
                     ],
-                    'dist/js/cits.min.js': [
-                        'scripts/app/nav-sticky.js'
+                    'assets/js/cits.min.js': [
+                        'src/js/app/nav-sticky.js'
                     ],
-                    'dist/js/libs.min.js': [
-                        'scripts/jquery.js',
+                    'assets/js/libs.min.js': [
+                        'src/js/jquery.js',
                         jsLibraryFiles
                     ],
                 }
@@ -130,15 +130,15 @@ module.exports = function (grunt) {
                     beautify: false
                 },
                 files: {
-                    'dist/js/construct.min.js': [
-                        'scripts/init.js',
-                        'scripts/app/application.js'
+                    'assets/js/construct.min.js': [
+                        'src/js/init.js',
+                        'src/js/app/application.js'
                     ],
-                    'dist/js/cits.min.js': [
-                        'scripts/app/nav-sticky.js'
+                    'assets/js/cits.min.js': [
+                        'src/js/app/nav-sticky.js'
                     ],
-                    'dist/js/libs.min.js': [
-                        'scripts/jquery.js',
+                    'assets/js/libs.min.js': [
+                        'src/js/jquery.js',
                         jsLibraryFiles
                     ],
                 }
@@ -164,7 +164,7 @@ module.exports = function (grunt) {
                     force: true
                 },
                 src: [
-                    'scripts/app/**/*.js'
+                    'src/js/app/**/*.js'
                 ]
             },
             prod: {
@@ -172,7 +172,7 @@ module.exports = function (grunt) {
                     force: false
                 },
                 src: [
-                    'scripts/app/**/*.js'
+                    'src/js/app/**/*.js'
                 ]
             }
         },
@@ -185,7 +185,7 @@ module.exports = function (grunt) {
                     livereload: true
                 },
                 files: [
-                    'stylesheets/**/*.scss'
+                    'src/stylesheets/**/*.scss'
                 ],
                 tasks: [
                     'clean:css',
@@ -196,7 +196,7 @@ module.exports = function (grunt) {
             },
             uglify: {
                 files: [
-                    'scripts/**/*.js'
+                    'src/js/**/*.js'
                 ],
                 tasks: [
                     'clean:js',
