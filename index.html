@@ -59,7 +59,7 @@
         </section>
         <section id="case" class="region region-md">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 ">
                     <br>
                     <br>
                     <h2 class="h1">Vad vi gör</h2>
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 ">
                     <figure class="bg-img-cover ratio-4-3 text-reverse">
                         <img src="assets/img/swaraj-tiwari-139325.jpg" alt="">
                         <figcaption>
@@ -86,7 +86,7 @@
                         </figcaption>
                     </figure>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 ">
                     <figure class="bg-img-cover ratio-4-3 text-reverse">
                         <img src="assets/img/oleg-kuzmin-96890.jpg" alt="">
                         <figcaption>
@@ -110,7 +110,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 hideme">
                     <figure class="bg-img-cover ratio-4-3 text-reverse">
                         <img src="assets/img/avblasoittfs3dwk37d8.jpg" alt="">
                         <figcaption>
@@ -123,7 +123,7 @@
                     <h3 class="h4">Strategisk rådgivning</h3>
                     <p>Med ledande ämnesexperter och förståelse för både det privata och offentliga är vi Sveriges ledande rådgivare.</p>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 hideme">
                     <figure class="bg-img-cover ratio-4-3 text-reverse">
                         <img src="assets/img/yvette-de-wit-118721.jpg" alt="">
                         <figcaption>
@@ -137,7 +137,7 @@
                 </div>
             </div>
             <div class="row justify-content-between">
-                <div class="col-md-7">
+                <div class="col-md-7 hideme">
                     <figure class="bg-img-cover ratio-4-3">
                         <img src="assets/img/rebecca-johnston-17130.jpg" alt="">
                         <figcaption>
@@ -150,12 +150,12 @@
                         </figcaption>
                     </figure>
                 </div>
-                <div class="col-md-4 align-self-center">
+                <div class="col-md-4 align-self-center hideme">
                     <p class="lead">Vi upptäckte en fastighetskonsult som drivs av att skapa långsiktiga värden.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 hideme">
                     <figure class="bg-img-cover ratio-4-3 text-reverse">
                         <img src="assets/img/annie-spratt-124994.jpg" alt="">
                         <figcaption>
@@ -167,10 +167,10 @@
                         </figcaption>
                     </figure>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 hideme">
                     <figure class="bg-img-cover ratio-4-3 text-reverse">
                         <img src="assets/img/case-harald-pihl-01.jpg" alt="">
-                        <figcaption>
+                        <figcaption class="hideme"> 
                             <h3>Ingen heavy metal</h3>
                             <p>
                                 <strong>Harald Pihl</strong>
@@ -183,7 +183,7 @@
                 </div>
             </div>
             <div class="row ">
-                <div class="col-md-8">
+                <div class="col-md-8 hideme">
                     <figure class="bg-img-cover ratio-4-3 text-reverse">
                         <img src="assets/img/leo-fosdal-113874.jpg" alt="">
                         <figcaption>
@@ -195,7 +195,7 @@
                         </figcaption>
                     </figure>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 hideme">
 
                     <blockquote>
                         <p class="js-hyphenate">Medlemsintaget ökade med mer än 10 gånger.</p>
@@ -324,70 +324,94 @@
             </div>
         </section>
     </div>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="assets/js/libs.min.js"></script>
-<script src="assets/js/cits.min.js"></script>
-<!-- <script src="dist/js/construct.min.js"></script> -->
-<script>
-    // Scroll to anchor
-    function scrollToAnchor() {
-        var verticalOffset = 2,
-            scrollSpeed = 500;
-
-        $('a[href^="#"]:not(a[href="#"])').click(function() {
-            $('html, body').animate({
-                scrollTop: $('[id="' + $.attr(this, 'href').substr(1) + '"]').offset().top + verticalOffset
-            }, scrollSpeed);
-            return false;
-        });
-    }
-
-    scrollToAnchor();
-
-    // Hyphenation
-    $('.js-hyphenate').hyphenate('sv');
-
-    // Get first child image of element and place it as background-image
-    $.fn.setBgImage = function () {
-        var articleImage = this.find('img'),
-            articleImageSrc = articleImage.attr('src');
-
-        articleImage.css('display', 'none');
-        this.css('background-image', 'url(' + articleImageSrc + ')');
-    };
-
-    // Items to set and remove background image on
-    $('.bg-img-cover').each(function() {
-        $(this).setBgImage();
-    });
-
-    // Collapse without ID:s
-    $.fn.collapseNext = function() {
-        return this.each(function() {
-            var trigger = $(this),
-                target = trigger.next('.collapse-body'),
-                isOpen = trigger.hasClass('active');
-
-            trigger
-                .toggleClass('active')
-                .attr('aria-expanded', !isOpen);
-
-            target
-                .toggleClass('active');
-        });
-    };
-
-    $('[data-toggle=collapse-next]').click(function() {
-        $(this).collapseNext('hide');
-    });
-
-    // Toggle breakpoint label
-    document.addEventListener('keydown', function(e) {
-        if (e.ctrlKey && e.altKey && e.shiftKey && e.code === 'KeyB') {
-            $('body').toggleClass('show-breakpoint');
+    <style>
+        .hideme {
+            opacity: 0;
         }
-    });
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="assets/js/libs.min.js"></script>
+    <script src="assets/js/cits.min.js"></script>
+    <!-- <script src="dist/js/construct.min.js"></script> -->
+
+    <script>
+        // Scroll to anchor
+        function scrollToAnchor() {
+            var verticalOffset = 2,
+                scrollSpeed = 500;
+
+            $('a[href^="#"]:not(a[href="#"])').click(function () {
+                $('html, body').animate({
+                    scrollTop: $('[id="' + $.attr(this, 'href').substr(1) + '"]').offset().top + verticalOffset
+                }, scrollSpeed);
+                return false;
+            });
+        }
+
+        scrollToAnchor();
+
+        // Hyphenation
+        $('.js-hyphenate').hyphenate('sv');
+
+        // Get first child image of element and place it as background-image
+        $.fn.setBgImage = function () {
+            var articleImage = this.find('img'),
+                articleImageSrc = articleImage.attr('src');
+
+            articleImage.css('display', 'none');
+            this.css('background-image', 'url(' + articleImageSrc + ')');
+        };
+
+        // Items to set and remove background image on
+        $('.bg-img-cover').each(function () {
+            $(this).setBgImage();
+        });
+
+        // Collapse without ID:s
+        $.fn.collapseNext = function () {
+            return this.each(function () {
+                var trigger = $(this),
+                    target = trigger.next('.collapse-body'),
+                    isOpen = trigger.hasClass('active');
+
+                trigger
+                    .toggleClass('active')
+                    .attr('aria-expanded', !isOpen);
+
+                target
+                    .toggleClass('active');
+            });
+        };
+
+        $('[data-toggle=collapse-next]').click(function () {
+            $(this).collapseNext('hide');
+        });
+
+        // Toggle breakpoint label
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && e.altKey && e.shiftKey && e.code === 'KeyB') {
+                $('body').toggleClass('show-breakpoint');
+            }
+        });
+        /* Every time the window is scrolled ... */
+        $(window).scroll(function () {
+
+            /* Check the location of each desired element */
+            $('.hideme').each(function (i) {
+
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                /* If the object is completely visible in the window, fade it it */
+                if (bottom_of_window > bottom_of_object) {
+
+                    $(this).animate({ 'opacity': '1' }, 1000);
+
+                }
+
+            });
+
+        });
 
     // // YouTube
     // // Load the IFrame Player API code asynchronously.
@@ -427,5 +451,7 @@
     //         }
     //     });
     // }
-</script>
+    </script>
+</body>
+
 </html>
