@@ -426,7 +426,7 @@ output {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 900;
   line-height: 1.1;
   color: inherit; }
@@ -3820,278 +3820,254 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   animation-fill-mode: forwards;
   animation-duration: 500ms; }
 
-@keyframes fadeInBgImage {
+@keyframes fadeInBg {
   from {
     opacity: 0; }
   to {
     opacity: 0.4; } }
 
-.btn {
-  transition: 200ms color ease;
-  transition: 200ms background-color ease;
-  font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: normal;
-  padding-left: 18px;
-  padding-right: 18px;
-  border-width: 2px;
-  border-color: transparent;
-  cursor: pointer; }
-  @media (min-width: 576px) {
-    .btn {
-      padding-left: 24px;
-      padding-right: 24px; } }
-  .btn:hover, .btn:hover:active {
-    border-color: transparent; }
-  .btn:active, .btn:active:focus, .btn:focus {
-    text-decoration: none;
-    outline: 1px dotted #007dc5;
-    outline-offset: 1px;
-    border-color: transparent; }
-  .btn .btn-text-collapsed {
-    display: none; }
-  .btn.collapsed .btn-text {
-    display: none; }
-  .btn.collapsed .btn-text-collapsed {
-    display: inline; }
+.fade-in-bg {
+  opacity: 0;
+  animation: fadeInBg ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1000ms; }
 
-.btn-lg {
-  padding-left: 27px;
-  padding-right: 27px; }
-
-.btn-xs {
-  font-size: 0.75rem;
-  padding: 3px 10px; }
-
-.btn:active,
-.btn.active {
-  box-shadow: none; }
-
-.btn-link {
-  font-weight: 500; }
-
-.btn-secondary {
-  color: #292b2c;
-  background-color: #fff;
-  border-color: #ccc;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .btn-secondary:hover {
-    color: #292b2c;
-    background-color: #e6e6e6;
-    border-color: #adadad; }
-  .btn-secondary:focus, .btn-secondary.focus {
-    box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5); }
-  .btn-secondary.disabled, .btn-secondary:disabled {
-    background-color: #fff;
-    border-color: #ccc; }
-  .btn-secondary:active, .btn-secondary.active,
-  .show > .btn-secondary.dropdown-toggle {
-    color: #292b2c;
-    background-color: #e6e6e6;
-    background-image: none;
-    border-color: #adadad;
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-
-.btn-transparent {
-  color: #fff;
-  background-color: transparent;
-  border-color: #fff;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .btn-transparent:hover {
-    color: #fff;
-    background-color: transparent;
-    border-color: #e0e0e0; }
-  .btn-transparent:focus, .btn-transparent.focus {
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5); }
-  .btn-transparent.disabled, .btn-transparent:disabled {
-    background-color: transparent;
-    border-color: #fff; }
-  .btn-transparent:active, .btn-transparent.active,
-  .show > .btn-transparent.dropdown-toggle {
-    color: #fff;
-    background-color: transparent;
-    background-image: none;
-    border-color: #e0e0e0;
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .btn-transparent:hover {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: #fff; }
-
-.btn-inverse {
-  color: #fff;
-  background-color: #333333;
-  border-color: transparent;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .btn-inverse:hover {
-    color: #fff;
-    background-color: #1a1a1a;
-    border-color: transparent; }
-  .btn-inverse:focus, .btn-inverse.focus {
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5); }
-  .btn-inverse.disabled, .btn-inverse:disabled {
-    background-color: #333333;
-    border-color: transparent; }
-  .btn-inverse:active, .btn-inverse.active,
-  .show > .btn-inverse.dropdown-toggle {
-    color: #fff;
-    background-color: #1a1a1a;
-    background-image: none;
-    border-color: transparent;
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-
-.btn-reverse {
-  color: #007dc5;
-  background-color: #fff;
-  border-color: transparent;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .btn-reverse:hover {
-    color: #007dc5;
-    background-color: #e6e6e6;
-    border-color: transparent; }
-  .btn-reverse:focus, .btn-reverse.focus {
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5); }
-  .btn-reverse.disabled, .btn-reverse:disabled {
-    background-color: #fff;
-    border-color: transparent; }
-  .btn-reverse:active, .btn-reverse.active,
-  .show > .btn-reverse.dropdown-toggle {
-    color: #007dc5;
-    background-color: #e6e6e6;
-    background-image: none;
-    border-color: transparent;
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-
-.btn-outline {
-  color: #007dc5;
-  background-color: #fff;
-  border-color: #007dc5;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .btn-outline:hover {
-    color: #007dc5;
-    background-color: #e6e6e6;
-    border-color: #005688; }
-  .btn-outline:focus, .btn-outline.focus {
-    box-shadow: 0 0 0 2px rgba(0, 125, 197, 0.5); }
-  .btn-outline.disabled, .btn-outline:disabled {
-    background-color: #fff;
-    border-color: #007dc5; }
-  .btn-outline:active, .btn-outline.active,
-  .show > .btn-outline.dropdown-toggle {
-    color: #007dc5;
-    background-color: #e6e6e6;
-    background-image: none;
-    border-color: #005688;
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .btn-outline:hover, .btn-outline:focus {
-    color: #007dc5;
-    background-color: #fff; }
-
-.btn-shy {
-  color: #007dc5;
-  background-color: transparent;
-  border-color: transparent;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .btn-shy:hover {
-    color: #007dc5;
-    background-color: transparent;
-    border-color: transparent; }
-  .btn-shy:focus, .btn-shy.focus {
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5); }
-  .btn-shy.disabled, .btn-shy:disabled {
-    background-color: transparent;
-    border-color: transparent; }
-  .btn-shy:active, .btn-shy.active,
-  .show > .btn-shy.dropdown-toggle {
-    color: #007dc5;
-    background-color: transparent;
-    background-image: none;
-    border-color: transparent;
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .btn-shy:hover {
-    color: #fff;
-    background-color: #0275d8; }
-
-.btn,
-.btn + .btn {
-  margin: 0 0 5px; }
-  @media (min-width: 576px) {
-    .btn,
-    .btn + .btn {
-      margin: 0; } }
-
-.btn-group.open .dropdown-toggle {
-  box-shadow: none; }
-
-.action-secondary {
-  position: absolute;
-  right: 12px;
-  top: 12px;
-  border-bottom: 0; }
-
-.collapse-list {
-  list-style: none;
-  padding-left: 0; }
-
-.collapse-heading {
-  padding: 3px 0; }
-  .collapse-heading::after {
-    display: block;
-    content: "";
-    clear: both; }
-
-.collapse-body-wrapper .collapse-body {
-  padding: 5px 0 10px; }
-  .collapse-body-wrapper .collapse-body::after {
-    display: block;
-    content: "";
-    clear: both; }
-
-figure {
+.case {
   margin-bottom: 1.5rem;
   position: relative;
   overflow: hidden; }
-  @media (min-width: 768px) {
-    figure {
+  @media (min-width: 992px) {
+    .case {
+      padding-top: 66.66%;
+      /* 4:3 Aspect Ratio */
       margin-bottom: 2rem; } }
 
-figcaption {
+.case-caption {
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.15), 0 0 10px rgba(255, 255, 255, 0.075);
-  padding: 5vmax;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  padding: 4vmax;
   background-color: rgba(255, 255, 255, 0.5);
   overflow: hidden;
   transition: 0.2s all ease-in;
   opacity: 0.9; }
-  @media (min-width: 768px) {
-    figcaption {
+  @media (min-width: 992px) {
+    .case-caption {
       padding: 3vmax;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       background-color: transparent; } }
-  .text-reverse figcaption {
+  .text-reverse .case-caption {
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.075);
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 0.8; }
-    @media (min-width: 768px) {
-      .text-reverse figcaption {
+    @media (min-width: 992px) {
+      .text-reverse .case-caption {
         background-color: transparent; } }
-  @media (min-width: 768px) {
-    figcaption:hover {
+  @media (min-width: 992px) {
+    .case-caption:hover {
       background-color: rgba(255, 255, 255, 0.5);
       opacity: 0.95; }
-      .text-reverse figcaption:hover {
+      .text-reverse .case-caption:hover {
         background-color: rgba(0, 0, 0, 0.7); }
-      figcaption:hover .reveal {
+      .case-caption:hover .reveal {
         opacity: 1; } }
-  figcaption .reveal {
+  .case-caption .reveal {
     transition: 0.2s all ease-in; }
-    @media (min-width: 768px) {
-      figcaption .reveal {
+    @media (min-width: 992px) {
+      .case-caption .reveal {
         opacity: 0; } }
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3363348, 2017-03-22T15:20:08-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Axiforma-Black by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/black/
+ *
+ * Webfont: Axiforma-BoldItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/bold-italic/
+ *
+ * Webfont: Axiforma-BlackItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/black-italic/
+ *
+ * Webfont: Axiforma-Book by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/book/
+ *
+ * Webfont: Axiforma-Bold by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/bold/
+ *
+ * Webfont: Axiforma-BookItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/book-italic/
+ *
+ * Webfont: Axiforma-ExtraBold by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/extra-bold/
+ *
+ * Webfont: Axiforma-ExtraBoldItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/extra-bold-italic/
+ *
+ * Webfont: Axiforma-Heavy by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/heavy/
+ *
+ * Webfont: Axiforma-HeavyItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/heavy-italic/
+ *
+ * Webfont: Axiforma-Italic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/italic/
+ *
+ * Webfont: Axiforma-Light by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/light/
+ *
+ * Webfont: Axiforma-LightItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/light-italic/
+ *
+ * Webfont: Axiforma-Medium by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/medium/
+ *
+ * Webfont: Axiforma-MediumItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/medium-italic/
+ *
+ * Webfont: Axiforma-Regular by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/regular/
+ *
+ * Webfont: Axiforma-SemiBold by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/semi-bold/
+ *
+ * Webfont: Axiforma-SemiBoldItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/semi-bold-italic/
+ *
+ * Webfont: Axiforma-Thin by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/thin/
+ *
+ * Webfont: Axiforma-ThinItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/thin-italic/
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3363348
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright &#x00A9; 2017 by Kastelov. All rights reserved.
+ *
+ * © 2017 MyFonts Inc
+*/
+/* @import must be at top of file, otherwise CSS will not work */
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_12_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_12_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_12_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_12_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_12_0.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_13_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_13_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_13_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_13_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_13_0.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_B_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_B_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_B_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_B_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_B_0.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_C_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_C_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_C_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_C_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_C_0.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_F_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_F_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_F_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_F_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_F_0.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_A_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_A_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_A_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_A_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_A_0.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_D_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_D_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_D_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_D_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_D_0.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_E_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_E_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_E_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_E_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_E_0.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_10_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_10_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_10_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_10_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_10_0.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_11_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_11_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_11_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_11_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_11_0.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_4_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_4_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_4_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_4_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_4_0.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_1_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_1_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_1_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_1_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_1_0.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_6_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_6_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_6_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_6_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_6_0.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_7_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_7_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_7_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_7_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_7_0.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_8_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_8_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_8_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_8_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_8_0.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url("../../assets/fonts/webfonts/335214_9_0.eot");
+  src: url("../../assets/fonts/webfonts/335214_9_0.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/webfonts/335214_9_0.woff2") format("woff2"), url("../../assets/fonts/webfonts/335214_9_0.woff") format("woff"), url("../../assets/fonts/webfonts/335214_9_0.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic; }
 
 @media (min-width: 576px) {
   .container {
@@ -4134,7 +4110,7 @@ figcaption {
 .show-breakpoint:after {
   transition: 200ms all ease 0;
   content: 'Breakpoint: none';
-  font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
   font-size: 10px;
   text-transform: uppercase;
@@ -4331,16 +4307,16 @@ figcaption {
     background-color: rgba(0, 0, 0, 0.6); }
 
 .nav-main-label {
-  font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 7px;
   font-weight: 600;
   text-transform: uppercase;
   color: #fff; }
 
 .nav-main .nav a {
-  font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.75rem;
-  font-weight: 900;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   color: #1a1a1a;
@@ -4391,7 +4367,7 @@ h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5 {
-  margin-bottom: 18px; }
+  margin-bottom: 1.5rem; }
   h1.light, .h1.light,
   h2.light, .h2.light,
   h3.light, .h3.light,
@@ -4401,17 +4377,29 @@ h5, .h5 {
 
 @media (min-width: 576px) {
   h1, .h1 {
-    font-size: 3.2rem; }
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 2.5rem; }
   h2, .h2 {
-    font-size: 2.8rem; }
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 2rem; }
   h3, .h3 {
-    font-size: 2.2rem; }
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 0.9rem; }
   h4, .h4 {
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 0.9rem; }
   h5, .h5 {
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: 0.9rem; }
   h6, .h6 {
-    font-size: 1.2rem; } }
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem; } }
 
 p + h2,
 p + .h2,
@@ -4446,7 +4434,7 @@ ol {
   font-weight: 400; }
 
 .large-text {
-  font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 2.5rem; }
   @media (min-width: 576px) {
     .large-text {
@@ -4513,7 +4501,7 @@ blockquote {
     blockquote p:after {
       content: '\201D'; }
   blockquote cite {
-    font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
     font-style: normal;
@@ -4664,45 +4652,31 @@ a.bg-warning:focus, a.bg-warning:hover {
 a.bg-danger:focus, a.bg-danger:hover {
   background-color: #e4b9b9 !important; }
 
-.material-icons {
-  vertical-align: text-bottom;
-  /* Rules for sizing the icon. */
-  /* Rules for using icons as black on a light background. */
-  /* Rules for using icons as white on a dark background. */ }
-  .material-icons.md-18 {
-    font-size: 18px; }
-  .material-icons.md-24 {
-    font-size: 24px; }
-  .material-icons.md-36 {
-    font-size: 36px; }
-  .material-icons.md-48 {
-    font-size: 48px; }
-  .material-icons.md-dark {
-    color: rgba(0, 0, 0, 0.54); }
-    .material-icons.md-dark.md-inactive {
-      color: rgba(0, 0, 0, 0.26); }
-  .material-icons.md-light {
-    color: white; }
-    .material-icons.md-light.md-inactive {
-      color: rgba(255, 255, 255, 0.3); }
-
 /*!
  * Working
  */
 .logo {
-  font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.5rem;
-  font-weight: 900;
-  padding-bottom: 6px;
+  font-weight: 800;
+  color: #1a1a1a;
   display: block;
-  border-bottom: 0; }
+  border-bottom: 0;
+  margin-bottom: 6px;
+  line-height: 1.1; }
+  @media (min-width: 768px) {
+    .logo {
+      margin-bottom: 12px; } }
   .logo:hover {
-    color: #fff; }
+    color: #1a1a1a; }
   .logo sup {
-    font-size: 0.625rem;
-    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 900;
     letter-spacing: 0.05em;
     vertical-align: super; }
+  .logo #logo-construct {
+    fill: currentColor;
+    width: 180px; }
   .is-transparent .logo {
     color: #fff; }
 
@@ -4725,7 +4699,7 @@ img {
   top: 0;
   left: 0;
   opacity: .2;
-  transition: background-image .5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
   animation: fadeInImage 1.5s; }
 
 .region {
@@ -4786,8 +4760,21 @@ img {
   left: 0;
   pointer-events: none; }
 
+.bg-vid {
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.2;
+  transform: translateX(-50%) translateY(-50%);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .contact-card {
-  font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 600;
   line-height: 1.8; }
   @media (min-width: 768px) {
@@ -4804,15 +4791,17 @@ img {
   padding-left: 0; }
 
 .tag {
-  font-family: "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 800;
-  text-transform: uppercase;
-  margin-right: 18px;
+  margin-right: 6px;
   display: inline-block; }
   @media (min-width: 768px) {
     .tag {
       font-size: 0.75rem; } }
   .tag:last-child {
     margin-right: 0; }
+
+.show-me {
+  opacity: 0; }
 
 /*# sourceMappingURL=../../none */
