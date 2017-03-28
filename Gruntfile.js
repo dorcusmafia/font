@@ -12,7 +12,7 @@ module.exports = function (grunt) {
         // npmPath + '/bootstrap/dist/js/bootstrap.js',
         // npmPath + '/responsive-toolkit/dist/bootstrap-toolkit.js',
         npmPath + '/hypher/dist/jquery.hypher.js',
-        'scripts/app/sv.js', // This jQuery version cannot be downloaded via npm. https://github.com/bramstein/hyphenation-patterns/blob/master/dist/browser/sv.js
+        'src/js/app/sv.js', // This jQuery version cannot be downloaded via npm. https://github.com/bramstein/hyphenation-patterns/blob/master/dist/browser/sv.js
     ];
 
     grunt.initConfig({
