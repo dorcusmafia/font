@@ -116,11 +116,27 @@
 
 // Fade in background image
 // --------------------------------------------------
-@keyframes fadeInBgImage {
+@keyframes fadeInBg {
     from {
         opacity: 0;
     }
     to {
         opacity: 0.4;
     }
+}
+
+// Class version
+.fade-in-bg {
+    opacity: 0; // Make things invisible on start
+    animation: fadeInBg ease-in 1; // Call the animation named fadeIn, use animation ease-in and repeat it only 1 time
+    animation-fill-mode: forwards; // On completion remain on last keyframe value (opacity: 1)
+    animation-duration: 1000ms;
+}
+
+// Mixin version
+@mixin fade-in-bg($duration: 500ms) {
+    opacity: 0; // Make element invisible on start
+    animation: fadeInBg ease-in 1; // Call animation: fadeIn, use animation ease-in and repeat it 1 time
+    animation-fill-mode: forwards; // On completion remain on last keyframe value (opacity: 1)
+    animation-duration: $duration;
 }

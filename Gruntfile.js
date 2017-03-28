@@ -9,12 +9,10 @@ module.exports = function (grunt) {
 
     var jsLibraryFiles = [
         npmPath + '/jquery/dist/jquery.js',
-        npmPath + '/bootstrap/dist/js/bootstrap.js',
-        npmPath + '/responsive-toolkit/dist/bootstrap-toolkit.js',
-        npmPath + '/tether/dist/js/tether.js',
-        // npmPath + '/jquery-lazy/jquery.lazy.js',
+        // npmPath + '/bootstrap/dist/js/bootstrap.js',
+        // npmPath + '/responsive-toolkit/dist/bootstrap-toolkit.js',
         npmPath + '/hypher/dist/jquery.hypher.js',
-        'src/js/app/sv.js', // This jQuery version cannot be downloaded via npm. https://github.com/bramstein/hyphenation-patterns/blob/master/dist/browser/sv.js
+        'scripts/app/sv.js', // This jQuery version cannot be downloaded via npm. https://github.com/bramstein/hyphenation-patterns/blob/master/dist/browser/sv.js
     ];
 
     grunt.initConfig({
@@ -64,28 +62,6 @@ module.exports = function (grunt) {
             }
         },
 
-        // Concat
-        // --------------------------------------------------
-        concat: {
-            options: {
-                separator: ';'
-            },
-            // js: {
-            //     src: [
-            //         'scripts/init.js',
-            //         'scripts/app/application.js'
-            //     ],
-            //     dest: 'dist/js/construct.js'
-            // },
-            // css: {
-            //     src: [
-            //         'node_modules/bootstrap/dist/css/bootstrap.css',
-            //         'node_modules/select2/dist/css/select2.css'
-            //     ],
-            //     dest: 'dist/css/lib.css',
-            // }
-        },
-
         // Copy files
         // -----------------------------------------------------
         copy: {
@@ -112,14 +88,10 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'assets/js/construct.min.js': [
-                        'src/js/init.js',
-                        'src/js/app/application.js'
-                    ],
-                    'assets/js/cits.min.js': [
                         'src/js/app/nav-sticky.js'
                     ],
                     'assets/js/libs.min.js': [
-                        'src/js/jquery.js',
+                        'src/js/lib/jquery.js',
                         jsLibraryFiles
                     ],
                 }
@@ -131,14 +103,10 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'assets/js/construct.min.js': [
-                        'src/js/init.js',
-                        'src/js/app/application.js'
-                    ],
-                    'assets/js/cits.min.js': [
                         'src/js/app/nav-sticky.js'
                     ],
                     'assets/js/libs.min.js': [
-                        'src/js/jquery.js',
+                        'src/js/lib/jquery.js',
                         jsLibraryFiles
                     ],
                 }
@@ -149,10 +117,10 @@ module.exports = function (grunt) {
         // -----------------------------------------------------
         clean: {
             css: [
-                'dist/css/**/*.css'
+                'assets/css/**/*.*'
             ],
             js: [
-                'dist/js/**/*.js'
+                'assets/js/**/*.* '
             ]
         },
 
@@ -190,7 +158,6 @@ module.exports = function (grunt) {
                 tasks: [
                     'clean:css',
                     'sass',
-                    // 'concat:css',
                     'postcss'
                 ],
             },
@@ -200,7 +167,6 @@ module.exports = function (grunt) {
                 ],
                 tasks: [
                     'clean:js',
-                    // 'concat:js',
                     'uglify:dev'
                 ]
             },
@@ -218,7 +184,6 @@ module.exports = function (grunt) {
     // Load tasks
     // --------------------------------------------------
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -234,7 +199,6 @@ module.exports = function (grunt) {
         'exec:remove_writeprotection',
         'clean',
         'sass',
-        // 'concat',
         'postcss',
         'jshint:dev',
         'copy:js',
@@ -245,7 +209,6 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean',
         'sass',
-        // 'concat',
         'postcss',
         'copy:js',
         'uglify:prod',

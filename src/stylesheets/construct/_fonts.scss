@@ -1,0 +1,259 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3363348, 2017-03-22T15:20:08-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Axiforma-Black by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/black/
+ *
+ * Webfont: Axiforma-BoldItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/bold-italic/
+ *
+ * Webfont: Axiforma-BlackItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/black-italic/
+ *
+ * Webfont: Axiforma-Book by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/book/
+ *
+ * Webfont: Axiforma-Bold by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/bold/
+ *
+ * Webfont: Axiforma-BookItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/book-italic/
+ *
+ * Webfont: Axiforma-ExtraBold by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/extra-bold/
+ *
+ * Webfont: Axiforma-ExtraBoldItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/extra-bold-italic/
+ *
+ * Webfont: Axiforma-Heavy by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/heavy/
+ *
+ * Webfont: Axiforma-HeavyItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/heavy-italic/
+ *
+ * Webfont: Axiforma-Italic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/italic/
+ *
+ * Webfont: Axiforma-Light by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/light/
+ *
+ * Webfont: Axiforma-LightItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/light-italic/
+ *
+ * Webfont: Axiforma-Medium by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/medium/
+ *
+ * Webfont: Axiforma-MediumItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/medium-italic/
+ *
+ * Webfont: Axiforma-Regular by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/regular/
+ *
+ * Webfont: Axiforma-SemiBold by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/semi-bold/
+ *
+ * Webfont: Axiforma-SemiBoldItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/semi-bold-italic/
+ *
+ * Webfont: Axiforma-Thin by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/thin/
+ *
+ * Webfont: Axiforma-ThinItalic by Kastelov
+ * URL: http://www.myfonts.com/fonts/kastelov/axiforma/thin-italic/
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3363348
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright &#x00A9; 2017 by Kastelov. All rights reserved.
+ *
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+//@import url('//hello.myfonts.net/count/335214');
+
+// Font weight mapping
+// http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple
+// https://developer.mozilla.org/en/docs/Web/CSS/font-weight
+
+// Axiforma-Thin 100
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_12_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_12_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_12_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_12_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_12_0.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+// Axiforma-ThinItalic 100
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_13_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_13_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_13_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_13_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_13_0.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+// Axiforma-Light 300
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_B_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_B_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_B_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_B_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_B_0.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+// Axiforma-LightItalic 300
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_C_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_C_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_C_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_C_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_C_0.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+// Axiforma-Regular 400
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_F_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_F_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_F_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_F_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_F_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Axiforma-Italic 400
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_A_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_A_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_A_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_A_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_A_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+// Axiforma-Medium 500
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_D_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_D_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_D_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_D_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_D_0.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+// Axiforma-MediumItalic 500
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_E_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_E_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_E_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_E_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_E_0.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+// Axiforma-SemiBold 600
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_10_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_10_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_10_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_10_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_10_0.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+// Axiforma-SemiBoldItalic 600
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_11_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_11_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_11_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_11_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_11_0.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+// Axiforma-Bold 700
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_4_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_4_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_4_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_4_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_4_0.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+// Axiforma-BoldItalic 700
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_1_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_1_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_1_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_1_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_1_0.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+// Axiforma-ExtraBold 800
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_6_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_6_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_6_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_6_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_6_0.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+// Axiforma-ExtraBoldItalic 800
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_7_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_7_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_7_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_7_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_7_0.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+// Axiforma-Heavy 900
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_8_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_8_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_8_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_8_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_8_0.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+// Axiforma-HeavyItalic 900
+@font-face {
+    font-family: 'Axiforma';
+    src: url('../../assets/fonts/webfonts/335214_9_0.eot');
+    src: url('../../assets/fonts/webfonts/335214_9_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_9_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_9_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_9_0.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+// // Axiforma-Book
+// @font-face {
+//     font-family: 'Axiforma';
+//     src: url('../../assets/fonts/webfonts/335214_3_0.eot');
+//     src: url('../../assets/fonts/webfonts/335214_3_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_3_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_3_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_3_0.ttf') format('truetype');
+// }
+//
+// // Axiforma-BookItalic
+// @font-face {
+//     font-family: 'Axiforma';
+//     src: url('../../assets/fonts/webfonts/335214_5_0.eot');
+//     src: url('../../assets/fonts/webfonts/335214_5_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_5_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_5_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_5_0.ttf') format('truetype');
+// }
+
+// // Axiforma-Black
+// @font-face {
+//     font-family: 'Axiforma';
+//     src: url('../../assets/fonts/webfonts/335214_0_0.eot');
+//     src: url('../../assets/fonts/webfonts/335214_0_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_0_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_0_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_0_0.ttf') format('truetype');
+//     font-weight: 800;
+//     font-style: normal;
+// }
+//
+// // Axiforma-BlackItalic
+// @font-face {
+//     font-family: 'Axiforma';
+//     src: url('../../assets/fonts/webfonts/335214_2_0.eot');
+//     src: url('../../assets/fonts/webfonts/335214_2_0.eot?#iefix') format('embedded-opentype'),url('../../assets/fonts/webfonts/335214_2_0.woff2') format('woff2'),url('../../assets/fonts/webfonts/335214_2_0.woff') format('woff'),url('../../assets/fonts/webfonts/335214_2_0.ttf') format('truetype');
+// }
