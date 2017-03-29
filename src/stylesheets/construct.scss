@@ -61,45 +61,47 @@
 @import "construct/animation";
 @import "construct/icons";
 // Mixins above must come first
-// @import "construct/brand";
-@import "construct/buttons";
-@import "construct/collapse";
-@import "construct/figure";
-// @import "construct/footer";
-// @import "construct/forms";
+// ----------------------------
+// @import "construct/buttons";
+@import "construct/case";
+// @import "construct/collapse";
+@import "construct/fonts";
 @import "construct/grid";
 @import "construct/header";
-// @import "construct/list-tables";
-// @import "construct/media";
-// @import "construct/messages";
-// @import "construct/modals";
-// @import "construct/nav-local";
 @import "construct/nav-main";
-// @import "construct/popovers";
 @import "construct/typography";
-@import "construct/material-icons";
+// @import "construct/material-icons";
 /*!
  * Working
  */
 .logo {
     font-family: $font-family-sans-serif;
     font-size: $font-size-xl;
-    font-weight: 900;
-    //color: $body-color;
-    // color: #fff;
-    padding-bottom: $spacing-xxs;
+    font-weight: 800;
+    color: $body-color;
     display: block;
     border-bottom: 0;
+    margin-bottom: $spacing-xxs;
+    line-height: 1.1;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: $spacing-xs;
+    }
 
     &:hover {
-        color: #fff;
+        color: $body-color;
     }
 
     sup {
-        font-size: $font-size-xxs;
-        text-transform: uppercase;
+        font-size: $font-size-xs;
+        font-weight: 900;
         letter-spacing: 0.05em;
         vertical-align: super;
+    }
+
+    #logo-construct {
+        fill: currentColor;
+        width: 180px;
     }
 
     .is-transparent & {
@@ -124,14 +126,13 @@ img {
 }
 
 .bg-full {
-    // @include fade-in(1.5s);
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     opacity: .2;
-    transition: background-image .5s ease-in-out;
+    transition: background-image 0.5s ease-in-out;
     animation: fadeInImage 1.5s;
 }
 
@@ -186,11 +187,11 @@ img {
 .ratio-4-3 {
     padding-top: 66.66%; /* 4:3 Aspect Ratio */
 }
-
 .ratio-8-5 {
     padding-top: 62.5%; /* 16:9 Aspect Ratio */
 }
 
+// YouTube version
 .video-background {
     position: absolute;
     top: 0;
@@ -209,6 +210,22 @@ img {
     top: 0;
     left: 0;
     pointer-events: none;
+}
+
+// HTML5 version
+.bg-vid {
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.2;
+    transform: translateX(-50%) translateY(-50%);
+    // background-image: url(/assets/img/iqhujvauqps-michael-mroczek.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .contact-card {
@@ -237,8 +254,8 @@ img {
 .tag {
     font-family: $font-family-sans-serif;
     font-weight: 800;
-    text-transform: uppercase;
-    margin-right: $spacing-sm;
+    // text-transform: uppercase;
+    margin-right: $spacing-xxs;
     display: inline-block;
 
     @include media-breakpoint-up(md) {
@@ -248,4 +265,8 @@ img {
     &:last-child {
         margin-right: 0;
     }
+}
+
+.show-me {
+    opacity: 0;
 }

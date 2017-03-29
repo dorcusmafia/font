@@ -34,21 +34,20 @@
     .nav {
         a {
             font-family: $font-family-sans-serif;
-            font-size: $font-size-xs;
+            font-size: $font-size-sm;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.03em;
             color: $body-color;
-            // color: #fff;
             margin-right: $spacing-sm;
             display: block;
 
             @include media-breakpoint-up(sm) {
-                font-size: $font-size-xxs;
+                font-size: $font-size-xs;
             }
 
             @include media-breakpoint-up(md) {
-                // font-size: $font-size-xxxs;
+                font-size: $font-size-xxs;
             }
 
             &:last-child {
