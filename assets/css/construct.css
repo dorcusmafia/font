@@ -3833,7 +3833,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   animation-duration: 1000ms; }
 
 .case {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   position: relative;
   overflow: hidden; }
   @media (min-width: 992px) {
@@ -3844,7 +3844,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 .case-caption {
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.15), 0 0 10px rgba(255, 255, 255, 0.075);
-  padding: 4vmax;
+  padding: 2vmax 0;
   background-color: rgba(255, 255, 255, 0.5);
   overflow: hidden;
   transition: 0.2s all ease-in;
@@ -3858,34 +3858,44 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
       right: 0;
       bottom: 0;
       background-color: transparent; } }
-  @media (max-width: 991px) {
-    .case-caption {
-      min-height: 300px; } }
   @media (min-width: 992px) {
     .case-caption:hover {
       background-color: rgba(255, 255, 255, 0.5);
       opacity: 0.95; }
-      .text-reverse .case-caption:hover {
+      .case-dark .case-caption:hover {
         background-color: rgba(0, 0, 0, 0.7); }
       .case-caption:hover .reveal {
         opacity: 1; } }
-  .text-reverse .case-caption {
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.075);
-    background-color: rgba(0, 0, 0, 0.7);
-    opacity: 0.8; }
-    @media (min-width: 992px) {
-      .text-reverse .case-caption {
-        background-color: transparent; } }
+  @media (min-width: 992px) {
+    .case-dark .case-caption {
+      color: #fff;
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.075);
+      opacity: 0.8; } }
   @media (max-width: 991px) {
     .case-caption h1, .case-caption h2, .case-caption h3, .case-caption h4, .case-caption h5, .case-caption h6 {
       font-size: 1.8rem;
       line-height: 1.2;
-      margin-bottom: 0.9rem; } }
+      margin-bottom: 1.2rem; } }
   .case-caption .reveal {
     transition: 0.2s all ease-in; }
     @media (min-width: 992px) {
       .case-caption .reveal {
         opacity: 0; } }
+
+.case-image {
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio */
+  width: 100%;
+  height: 100%; }
+  @media (min-width: 768px) {
+    .case-image {
+      padding-top: 66.66%;
+      /* 4:3 Aspect Ratio */ } }
+  @media (min-width: 992px) {
+    .case-image {
+      position: absolute;
+      top: 0;
+      left: 0; } }
 
 /**
  * @license
@@ -4494,7 +4504,7 @@ hr {
 
 blockquote {
   padding: 10%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   position: relative;
   border-top: 1px solid #1a1a1a;
   border-bottom: 1px solid #1a1a1a; }
@@ -4506,7 +4516,7 @@ blockquote {
     font-weight: 700;
     line-height: 1.2;
     text-indent: -0.45em;
-    margin-bottom: 24px; }
+    margin-bottom: 0; }
     blockquote p:before {
       content: '\201C'; }
     blockquote p:after {
@@ -4517,6 +4527,7 @@ blockquote {
     font-weight: 700;
     font-style: normal;
     line-height: 1.5;
+    margin-top: 24px;
     display: block; }
     blockquote cite:before {
       content: '—\00A0'; }

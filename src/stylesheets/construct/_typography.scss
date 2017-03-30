@@ -213,7 +213,7 @@ hr {
 
 blockquote {
     padding: 10%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     position: relative;
     border-top: 1px solid $neutral-90;
     border-bottom: 1px solid $neutral-90;
@@ -227,7 +227,7 @@ blockquote {
         font-weight: 700;
         line-height: 1.2;
         text-indent: -0.45em;
-        margin-bottom: $spacing-base;
+        margin-bottom: 0;
 
         &:before {
             content: '\201C';
@@ -244,6 +244,7 @@ blockquote {
         font-weight: 700;
         font-style: normal;
         line-height: 1.5;
+        margin-top: $spacing-base;
         display: block;
 
         &:before {
