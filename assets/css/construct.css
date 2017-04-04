@@ -269,7 +269,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Libre Baskerville", "Lusitana", "Source Serif Pro", Georgia, "Times New Roman", Times, serif;
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
@@ -426,7 +426,7 @@ output {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 900;
   line-height: 1.1;
   color: inherit; }
@@ -3844,14 +3844,14 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 .case-caption {
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.15), 0 0 10px rgba(255, 255, 255, 0.075);
-  padding: 2vmax 0;
+  padding: 2vw 0;
   background-color: rgba(255, 255, 255, 0.5);
   overflow: hidden;
   transition: 0.2s all ease-in;
   opacity: 0.9; }
   @media (min-width: 992px) {
     .case-caption {
-      padding: 3vmax;
+      padding: 3vw;
       position: absolute;
       top: 0;
       left: 0;
@@ -4128,7 +4128,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .show-breakpoint:after {
   transition: 200ms all ease 0;
   content: 'Breakpoint: none';
-  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
   font-size: 10px;
   text-transform: uppercase;
@@ -4325,14 +4325,14 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     background-color: rgba(0, 0, 0, 0.6); }
 
 .nav-main-label {
-  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 7px;
   font-weight: 600;
   text-transform: uppercase;
   color: #fff; }
 
 .nav-main .nav a {
-  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.875rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -4455,7 +4455,7 @@ ol {
   font-weight: 400; }
 
 .large-text {
-  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 2.5rem; }
   @media (min-width: 576px) {
     .large-text {
@@ -4522,7 +4522,7 @@ blockquote {
     blockquote p:after {
       content: '\201D'; }
   blockquote cite {
-    font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Axiforma", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
     font-style: normal;
@@ -4678,7 +4678,7 @@ a.bg-danger:focus, a.bg-danger:hover {
  * Working
  */
 .logo {
-  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 800;
   color: #1a1a1a;
@@ -4796,7 +4796,7 @@ img {
   background-size: cover; }
 
 .contact-card {
-  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 600;
   line-height: 1.8; }
   @media (min-width: 768px) {
@@ -4813,7 +4813,7 @@ img {
   padding-left: 0; }
 
 .tag {
-  font-family: "Axiforma", "Muli", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Axiforma", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 800;
   margin-right: 6px;
   display: inline-block; }
@@ -4825,5 +4825,10 @@ img {
 
 .show-me {
   opacity: 0; }
+
+#case .show-more-section {
+  display: none; }
+  #case .show-more-section.active {
+    display: block; }
 
 /*# sourceMappingURL=../../none */

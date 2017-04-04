@@ -10,7 +10,7 @@ figure {
 
 figcaption {
     text-shadow: 0 0 3px rgba(255, 255, 255, 0.15), 0 0 10px rgba(255, 255, 255, 0.075);
-    padding: 5vmax;
+    padding: 5vw;
     position: absolute;
     top: 0;
     left: 0;
@@ -22,7 +22,7 @@ figcaption {
     opacity: 0.9;
 
     @include media-breakpoint-up(md) {
-        padding: 3vmax;
+        padding: 3vw;
         background-color: rgba(0, 0, 0, 0);
     }
 

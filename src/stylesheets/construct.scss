@@ -270,3 +270,13 @@ img {
 .show-me {
     opacity: 0;
 }
+
+#case {
+    .show-more-section {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}
