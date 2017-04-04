@@ -4698,7 +4698,8 @@ a.bg-danger:focus, a.bg-danger:hover {
     vertical-align: super; }
   .logo #logo-construct {
     fill: currentColor;
-    width: 180px; }
+    width: 180px;
+    height: 25px; }
   .is-transparent .logo {
     color: #fff; }
 
@@ -4830,5 +4831,13 @@ img {
   display: none; }
   #case .show-more-section.active {
     display: block; }
+
+.ie10 #hero,
+.ie10 #career,
+.ie10 #contact,
+.ie11 #hero,
+.ie11 #career,
+.ie11 #contact {
+  padding-top: 10vw; }
 
 /*# sourceMappingURL=../../none */

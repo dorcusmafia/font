@@ -102,6 +102,7 @@
     #logo-construct {
         fill: currentColor;
         width: 180px;
+        height: 25px;
     }
 
     .is-transparent & {
@@ -278,5 +279,15 @@ img {
         &.active {
             display: block;
         }
+    }
+}
+
+// IE hacks
+.ie10,
+.ie11 {
+    #hero,
+    #career,
+    #contact {
+        padding-top: 10vw;
     }
 }
