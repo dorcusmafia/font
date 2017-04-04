@@ -4679,16 +4679,9 @@ a.bg-danger:focus, a.bg-danger:hover {
  */
 .logo {
   font-family: "Axiforma", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 800;
   color: #1a1a1a;
   display: block;
-  border-bottom: 0;
-  margin-bottom: 6px;
-  line-height: 1.1; }
-  @media (min-width: 768px) {
-    .logo {
-      margin-bottom: 12px; } }
+  border-bottom: 0; }
   .logo:hover {
     color: #1a1a1a; }
   .logo sup {
@@ -4698,8 +4691,22 @@ a.bg-danger:focus, a.bg-danger:hover {
     vertical-align: super; }
   .logo #logo-construct {
     fill: currentColor;
-    width: 180px;
-    height: 25px; }
+    width: 104px;
+    height: 19px; }
+    @media (min-width: 576px) {
+      .logo #logo-construct {
+        width: 120px;
+        height: 23px; } }
+    @media (min-width: 768px) {
+      .logo #logo-construct {
+        width: 155px;
+        height: 30px;
+        margin-top: 6px;
+        margin-bottom: 6px; } }
+    @media (min-width: 992px) {
+      .logo #logo-construct {
+        width: 180px;
+        height: 25px; } }
   .is-transparent .logo {
     color: #fff; }
 
