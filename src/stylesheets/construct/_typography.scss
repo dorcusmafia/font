@@ -123,9 +123,11 @@ ol {
 }
 
 .kicker {
-    font-size: $font-size-xs;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-family: $font-family-sans-serif;
+    font-size: ($font-size-base * 1.2);
+    // font-size: $font-size-xs;
+    font-weight: 700;
+    // text-transform: uppercase;
     letter-spacing: 0.02em;
 }
 

@@ -3839,8 +3839,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   @media (min-width: 992px) {
     .case {
       padding-top: 66.66%;
-      /* 4:3 Aspect Ratio */
-      margin-bottom: 2rem; } }
+      /* 4:3 Aspect Ratio */ } }
 
 .case-caption {
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.15), 0 0 10px rgba(255, 255, 255, 0.075);
@@ -4446,9 +4445,9 @@ ol {
   background: rgba(26, 26, 26, 0.6); }
 
 .kicker {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-family: "Axiforma", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
   letter-spacing: 0.02em; }
 
 .lead {
@@ -4729,7 +4728,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: .2;
+  opacity: 0.2;
   transition: background-image 0.5s ease-in-out;
   animation: fadeInImage 1.5s; }
 
